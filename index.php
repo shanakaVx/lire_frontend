@@ -3,7 +3,7 @@
     BASE PATHS
 ----------------
 
-Project name = LireFrontend
+Project name = LireFrontend PHP
 
 Please put this project in your C:\wamp\www
 
