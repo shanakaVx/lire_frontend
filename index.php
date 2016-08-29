@@ -17,7 +17,7 @@ Absolute path to uploading records = C:\wamp\www\LireFrontend\voiceuploads
     </head>
     <body>
         <?php
-        // this is the index page for dasboard timeline and tokenizer
+        // this is the home page for dasboard timeline and tokenizer
         //Recording will go in another pages
         
         ?>
