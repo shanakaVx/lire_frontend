@@ -1,4 +1,4 @@
-# Steps to setup Lire front end in locally #
+# Steps to setup Lire front end locally #
 
 ## IMPORTANT! DO NOT code any where else, it will make the integration difficult at the end. Clone this and code on this repo. As you have separate modules there will not be merging conflicts, hopefully :) ##
 
