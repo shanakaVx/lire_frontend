@@ -8,7 +8,7 @@
 
 * Clone this repository to any where.
 * You will see all the project files are cloned into a folder called "LireFrontend"
-* Copy and paste that folder into the C:/wamp/www/ folder
+* Copy and paste that folder into the C:/wamp/www/ folder !IMPORTANT! OTHERWISE WILL NOT WORK
 * Then open that project in Netbeans it will run as a PHP project
 
 ### to Kim ###
