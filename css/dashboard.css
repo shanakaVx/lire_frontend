@@ -1,0 +1,58 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 31, 2016, 4:58:58 AM
+    Author     : Shanaka
+*/
+
+#container {
+    height: auto;
+    width: 900px;
+    float: left;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
+
+#content {
+    height: auto;
+    width: 420px;
+    float: left;
+}
+
+#vowels {
+    font-size: 18px;
+    height: 50px;
+    float: left;
+    text-align: center;
+}
+
+#language {
+    margin-bottom: 20px;
+}
+
+table {
+    text-align: center;
+}
+
+.bt {
+    font-size: 20pt;
+    font-family: 'Iskoola Pota';
+    cursor: pointer;
+    border: 1px solid #5da2e8;
+    color: #5da2e8;
+    background-color: transparent;
+}
+
+.bt:hover,
+.bt:focus {
+    border: 1px solid #42DCA3;
+    outline: none;
+    color: black;
+    background-color: #5da2e8;
+}

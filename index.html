@@ -13,7 +13,6 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="vendor/font-awesome/css/lirefonts.css" rel="stylesheet" type="text/css">
@@ -22,7 +21,10 @@
 
     <!-- Theme CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
-
+    
+    <!-- Views CSS -->
+    <link href="css/dashboard.css" rel="stylesheet">
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -30,6 +32,22 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- Loading Javascripts -->
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery-3.1.0.min.js"></script>
+    
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    
+    <!-- Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+    
+    <!-- Control JavaScript -->
+    <script src="js/dashboard.js"></script>
+    
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -105,7 +123,30 @@
              </div>
         </div>
         <div class="row">
-            <br><br><br><br><br><br><br>Dashboard is here ...<br><br><br><br><br><br><br><br><br>
+            
+            <audio id="audio" preload="auto" controls="">
+                <source src="">
+                HTML5 audio not supported in this browser!
+            </audio>
+            
+            <div id="container">
+                <div id="content">
+                    <!-- loading external html -->
+                </div>
+
+                <div id="vowels">
+                    <div id='language'>
+                        <select id="lang">
+                            <option name="si">Sinhala</option>
+                            <option name="ta">Tamil</option>
+                        </select>
+                    </div>
+                    <div id=keys>
+                        <!-- dynamic content -->
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </section>
 
@@ -145,8 +186,6 @@
         </div>
     </section>
 
-    <!-- Map Section -->
-
 
     <!-- Footer -->
     <footer>
@@ -154,21 +193,6 @@
             <p>Copyright 2016 &copy; Tone based voice synthesizer framework for voice based application development | SLIIT | CDAP | Group 16-05</p>
         </div>
     </footer>
-
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery-3.1.0.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>  -->
-
-    <!-- Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
 
 </body>
 
