@@ -24,6 +24,7 @@
     
     <!-- Views CSS -->
     <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/timeline.css" rel="stylesheet">
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,22 +32,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <!-- Loading Javascripts -->
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery-3.1.0.min.js"></script>
-    
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    
-    <!-- Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
-    
-    <!-- Control JavaScript -->
-    <script src="js/dashboard.js"></script>
     
 </head>
 
@@ -131,8 +116,28 @@
             
             <div id="container">
                 <div id="content">
-                    <!-- loading external html -->
+
                 </div>
+
+
+<table border="0" id="tones" class="tones">
+                <tr>
+                    <td>ka</td>
+                    <td>kha</td>
+                    <td>ga</td>
+                    <td>gha</td>
+                    <td>nga</td>
+                    <td>nnga</td>
+                </tr>
+                <tr>
+                    <td><input class="bt tone" type="button" value="ක" onclick="onClick('consonent', '3482')" draggable="true" data-fname="3482"/></td>
+                    <td><input class="bt tone" type="button" value="ඛ" onclick="onClick('consonent', '3483')" data-fname="3483"/></td>
+                    <td><input class="bt tone" type="button" value="ග" onclick="onClick('consonent', '3484')" data-fname="3484"/></td>
+                    <td><input class="bt tone" type="button" value="ඝ" onclick="onClick('consonent', '3485')" data-fname="3485"/></td>
+                    <td><input class="bt tone" type="button" value="ඞ" onclick="onClick('consonent', '3486')" data-fname="3486"/></td>
+                    <td><input class="bt tone" type="button" value="ඟ" onclick="onClick('consonent', '3487')" data-fname="3487"/></td>
+                </tr></table>
+
 
                 <div id="vowels">
                     <div id='language'>
@@ -147,6 +152,33 @@
                 </div>
             </div>
             
+        </div>
+
+        <!-- Timeline section inside the dashboard -->
+        <div class="row">
+
+            <ul id="playlist" class="timeline" draggable="true">
+                <li class="entry">
+                    <button id="delete" class="delete">X</button><br>
+                    <a data="voice_profiles/01/01-3482-3536.wav" data-pitch="N" data-time="N">
+                        a
+                    </a>
+                </li>
+                <li class="entry">
+                    <button id="delete" class="delete">X</button><br>
+                    <a data="voice_profiles/01/01-3482-3537.wav" data-pitch="N" data-time="N">
+                        aa
+                    </a>
+                </li>
+                <li class="entry">
+                    <button id="delete" class="delete btn-tile">X</button><br>
+                    <a data="voice_profiles/01/01-3482-3542.wav" data-pitch="N" data-time="N">
+                        a
+                    </a>
+                </li>
+                
+            </ul>
+
         </div>
     </section>
 
@@ -169,7 +201,7 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact Lire team</h2>
                 <p>Feel free to email us and provide some feedback or ask for assistance</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
+                <p><a href="mailto:shanaka.vx@gmail.com">feedback@lire.com</a>
                 </p>
                 <ul class="list-inline banner-social-buttons">
                     <li>
@@ -193,6 +225,24 @@
             <p>Copyright 2016 &copy; Tone based voice synthesizer framework for voice based application development | SLIIT | CDAP | Group 16-05</p>
         </div>
     </footer>
+
+    <!-- Loading Javascripts -->
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery-3.1.0.min.js"></script>
+    <script src="vendor/jquery/jquery-ui.min.js"></script>
+    
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery/jquery.easing.min.js"></script>
+    
+    <!-- Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+    
+    <!-- Control JavaScript -->
+    <script src="js/dashboard.js"></script>
+    <script src="js/timeline.js"></script>
 
 </body>
 

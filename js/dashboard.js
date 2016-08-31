@@ -6,13 +6,14 @@
 
 var audio = $('#audio');
 
-/**
- * @desc
- * @returns
- */
-$(function(){
+
+$(document).ready(function(){
     $("#content").load("alphabet.html");
     $("#keys").load("Sinhala.html");
+    $('#content input').draggable({
+        cancel: false
+    });
+
     $("#lang").change(function() {
         var str = "";
         $("select option:selected").each(function() {
@@ -20,8 +21,8 @@ $(function(){
             console.log(str);
             $("#keys").load(str); 
         });
-    });             
-});
+    });
+});         
 
 function onClick(type, prefix) {
     var player = audio[0];

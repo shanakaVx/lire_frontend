@@ -1,0 +1,74 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 20, 2015, 3:21:30 AM
+    Author     : Shanaka
+*/
+
+
+.activetile a{ 
+    color:blueviolet;
+    background:#333;
+    text-decoration:none; 
+}
+
+.timeline {
+    white-space:nowrap;
+    overflow-x: scroll;
+    overflow-y: none;
+    padding:30px 0 10px 0;
+    position:relative;
+    height: 140px;
+}
+
+.entry {
+    display: inline-block;
+    vertical-align: top;
+    background: #245383;
+    color: #fff;
+    padding: 3px;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    border-radius: 3px;
+    min-width: 50px;
+    height: 80px;
+    max-width: 20px;
+}
+
+.entry button {
+    width: 18px;
+    height: 18px;
+    margin-top: 0px;
+    padding: 0px 0px;
+    border: 2px solid white;
+    border-radius: 100% !important;
+    font-size: 10px;
+    color: white;
+    background: transparent;
+}
+
+.entry h1 {
+    color:#fff;
+    font-size:18px;
+    font-family:Georgia, serif;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.entry h2 {
+    letter-spacing:.2em;
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+/*
+.active a{ 
+    color:blueviolet;
+    background:#333;
+    text-decoration:none; 
+}
+*/
