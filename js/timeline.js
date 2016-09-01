@@ -152,8 +152,9 @@ $(document).ready(function () {
         drop: function () {
             alert(tlink);
             lin = '<li class = "entry">\n\
+                  <button id="delete" class="delete">X</button><br>\n\
                   <a data="' + tlink + '.wav" data-pitch="H" data-time="N">' + tname + '\
-                  </a><button id="delete" class="delete">X</button>\n\
+                  </a>\n\
               </li>';
             $('#playlist').append(lin);
             //update the number of tracks
