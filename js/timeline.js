@@ -49,7 +49,7 @@ $('#setopt').click(function(){
               console.log(data);
               changedFile = data;
               console.log("Spring server returned : "+status);
-              selectedToEdit.attr("data", "voice_profiles/01/"+changedFile);
+              selectedToEdit.attr("data", "voiceprofiles/01/"+changedFile);
           });
 });
 
@@ -125,36 +125,34 @@ function init() {
 function run(link, player) {
     player.src = link.attr('data');
     par = link.parent();
-    par.addClass('active').siblings().removeClass('active');
+    //par.fadeOut(5000);
+    par.addClass('activetile');
+    par.siblings().removeClass('activetile');
     audioTL[0].load();
     audioTL[0].play();
 
     $('#opt').html("Current " + current + "<br>No of tracks " + len);
 }
 
-$('#container').click(function(){
-    //$('.tone').draggable();
-});
-
 
 
 //drag and drop
 $(document).ready(function () {
-    $('.tone').draggable({revert: true,
-        start: function () {
-            tlink = $(this).find('a').attr('href');
-            tname = $(this).text();
-            console.log("dragghinggg");
-        }
-
-    });
+//    $('.tone').draggable({revert: true,
+//        start: function () {
+//            tlink = $(this).find('a').attr('href');
+//            tname = $(this).text();
+//            console.log("dragghinggg");
+//        }
+//
+//    });
 
 
     $('#playlist').droppable({accept: '.tone',
         drop: function () {
-            alert("watunaaa");
+            alert(tlink);
             lin = '<li class = "entry">\n\
-                  <a data="' + tlink + '" data-pitch="H" data-time="N">' + tname + '\
+                  <a data="' + tlink + '.wav" data-pitch="H" data-time="N">' + tname + '\
                   </a><button id="delete" class="delete">X</button>\n\
               </li>';
             $('#playlist').append(lin);
@@ -192,7 +190,7 @@ $('#tokenize').click(function(){
 
 
 function fillTimeline(data){
-    var basePath = "voice_profiles/01/";
+    var basePath = "voiceprofiles/01/";
     for(var key in data){
         var arr = data[key][0];
         

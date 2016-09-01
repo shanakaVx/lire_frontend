@@ -5,10 +5,21 @@
  */
 
 var audio = $('#audio');
-
+var tlink = "";
+var tname = "";
 
 $(document).ready(function(){
-    $("#content").load("alphabet.html");
+    $("#content").load("alphabet.html", function(){
+        $('#tonesa input').draggable({
+            cancel: false,
+            revert: true,
+            start: function () {
+                tlink = "voiceprofiles/1/01-"+$(this).attr('data-fname');
+                tname = $(this).attr('value');
+                //console.log($(this));
+            }
+        });
+    });
     $("#keys").load("Sinhala.html");
     $('#content input').draggable({
         cancel: false
