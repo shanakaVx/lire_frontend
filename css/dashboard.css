@@ -56,3 +56,10 @@ table {
     color: black;
     background-color: #5da2e8;
 }
+
+.optpane {
+    border: solid;
+    border-color: #b6d1ec;
+    background-color: #e1e8ef;
+    text-align: left;
+}

@@ -21,18 +21,19 @@
 
     <!-- Theme CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
-    
+    <link href="vendor/bootstrap-slider/slider.css" rel="stylesheet">
+
     <!-- Views CSS -->
     <link href="css/dashboard.css" rel="stylesheet">
     <link href="css/timeline.css" rel="stylesheet">
-    
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -89,7 +90,7 @@
                     <div class="col-md-8 col-md-offset-2">
                         <span class="icon-fa-lire-logo" style="font-size: 1500%;"></span>
                         <p class="intro-text">tone based voice synthesizer framework for voice based application development</p>
-                        
+
                         <a href="#dashboard" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -105,7 +106,7 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Dashboard</h2>
                 <p>Click and play the letters, or drag and drop on to the SpeechTimeline to read</p>
-             </div>
+            </div>
         </div>
         <div class="row">
             <div id="container">
@@ -125,14 +126,28 @@
                     </div>
                 </div>
             </div>
-            
+        </div><br>
+        <div class="row">
+            <div class="col-md-4 optpane">
+                <p>Tone options</p>
+                <span id="pitchSlider" class="hidden">Example slider label</span>
+                <input id="ex19" type="text"
+                    data-provide="slider"
+                    data-slider-ticks="[1, 2, 3]"
+                    data-slider-ticks-labels='["short", "medium", "long"]'
+                    data-slider-min="1"
+                    data-slider-max="3"
+                    data-slider-step="1"
+                    data-slider-value="3"
+                    data-slider-tooltip="hide" />
+
+            </div>
         </div>
 
         <audio id="audio" preload="auto" controls="">
-            <source src="">
-            HTML5 audio not supported in this browser!
+            <source src=""> HTML5 audio not supported in this browser!
         </audio>
-        
+
         <!-- Timeline section inside the dashboard -->
         <div class="row">
 
@@ -155,7 +170,7 @@
                         a
                     </a>
                 </li>
-                
+
             </ul>
 
         </div>
@@ -201,7 +216,8 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>Copyright 2016 &copy; Tone based voice synthesizer framework for voice based application development | SLIIT | CDAP | Group 16-05</p>
+            <p>Copyright 2016 &copy; Tone based voice synthesizer framework for voice based application development | SLIIT
+                | CDAP | Group 16-05</p>
         </div>
     </footer>
 
@@ -209,16 +225,17 @@
     <!-- jQuery -->
     <script src="vendor/jquery/jquery-3.1.0.min.js"></script>
     <script src="vendor/jquery/jquery-ui.min.js"></script>
-    
+
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    
+
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery/jquery.easing.min.js"></script>
-    
+    <script src="vendor/bootstrap-slider/slider.js"></script>
+
     <!-- Theme JavaScript -->
     <script src="js/grayscale.js"></script>
-    
+
     <!-- Control JavaScript -->
     <script src="js/dashboard.js"></script>
     <script src="js/timeline.js"></script>
