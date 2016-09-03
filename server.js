@@ -5,7 +5,10 @@ var bodyParser = require('body-parser');
 var request = require('request');
 var fs = require('fs');
 
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 8088;
+
+console.log('Node starting and will be up on port ' + port + '...');
+console.log('If that port is not available please change the port in server.js');
 
 app.use(express.static(__dirname + '/'));
 console.log(__dirname);
