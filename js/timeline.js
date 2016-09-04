@@ -52,16 +52,22 @@ $('#setopt').click(function(){
     if(slidert.bootstrapSlider('getValue') == "3")
         timing = "L";
 
+    var sendObj = {
+        "filename": filename[2],
+        "pitch": pitch,
+        "timing": timing
+    };
+
+    changeProsody(sendObj, pitch, timing);
+
+/*
     var checkFile = "";
     checkFile = (pitch != "N" ? pitch+"-" : "") + (timing != "N" ? timing+"-" : "") + filename[2];
 
-    console.log(checkFile);
-
-   //check if a file already exsists, if so stop and return that file
     $.ajax({
-        url:'../FUCKvoiceprofiles/1/'+checkFile,
+        url:"http://localhost:8088/voiceprofiles/1/"+checkFile,
         type: 'HEAD',
-        error: function(){
+        error: function(data){
             console.log("NO FILE");
             var sendObj = {
                 "filename": filename[2],
@@ -70,15 +76,15 @@ $('#setopt').click(function(){
             };
             //changeProsody(sendObj);
         },
-        success: function(){
+        success: function(data){
             console.log("YES FILE");
         }
     });
+*/
 });
 
 
-function changeProsody(sendObj){
-    
+function changeProsody(sendObj, pitch, timing){
     console.log(sendObj);
     $.get(
           'http://localhost:8080/prosody/changeprosody',
@@ -202,7 +208,7 @@ $(document).ready(function () {
 
     $('#playlist').droppable({accept: '.tone',
         drop: function () {
-            alert(tlink);
+            //alert(tlink);
             lin = '<li class = "entry">\n\
                   <button id="delete" class="delete">X</button><br>\n\
                   <a data="' + tlink + '.wav" data-pitch="N" data-time="N">' + tname + '\
