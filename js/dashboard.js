@@ -11,7 +11,7 @@ var vmods = "";
 var consonants = "";
 var userId = 1;
 
-$.getJSON("../letters-si.json",function(data){
+$.getJSON("./letters-si.json",function(data){
     console.log(data);
     vmods = data.vmod;
     consonants = data.consonant;
@@ -19,7 +19,7 @@ $.getJSON("../letters-si.json",function(data){
 });
 
 $(document).ready(function(){
-    $("#content").load("alphabet.html", function(){
+    $("#content").load("./alphabet.html", function(){
         $('#tonesa input').draggable({
             cancel: false,
             revert: true,
@@ -30,7 +30,7 @@ $(document).ready(function(){
             }
         });
     });
-    $("#keys").load("Sinhala.html");
+    $("#keys").load("./Sinhala.html");
     $('#content input').draggable({
         cancel: false
     });
