@@ -1,7 +1,29 @@
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Initializa the home page elements
+ * 
  */
 
+var sliderp
+var slidert
 
+$(document).ready(function(){
+        sliderp = $("#pitchSlider").bootstrapSlider({
+        ticks: [1, 2, 3],
+        ticks_labels: ['Low', 'Normal', 'High'],
+        min : 1,
+        max: 3
+    });
+
+        slidert = $("#timingSlider").bootstrapSlider({
+        ticks: [1, 2, 3],
+        ticks_labels: ['Short', 'Normal', 'Long'],
+        min : 1,
+        max: 3
+    });
+    //slider.bootstrapSlider('setValue', 1);
+
+    slidert.on('change', function(){
+        console.log(slidert.bootstrapSlider('getValue'));
+    });
+
+});

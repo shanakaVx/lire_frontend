@@ -9,6 +9,7 @@ var tlink = "";
 var tname = "";
 var vmods = "";
 var consonants = "";
+var userId = 1;
 
 $.getJSON("../letters-si.json",function(data){
     console.log(data);
@@ -23,7 +24,7 @@ $(document).ready(function(){
             cancel: false,
             revert: true,
             start: function () {
-                tlink = "voiceprofiles/1/01-"+$(this).attr('data-fname');
+                tlink = "voiceprofiles/"+userId+"/0"+userId+"-"+$(this).attr('data-fname');
                 tname = $(this).attr('value');
                 //console.log($(this));
             }
@@ -49,7 +50,7 @@ $(document).ready(function(){
 
 function onClick(type, prefix) {
     var player = audio[0];
-    var file = "voiceprofiles/1/01-"+prefix+".wav";
+    var file = "voiceprofiles/"+userId+"/0"+userId+"-"+prefix+".wav";
     var appendhtml = "";
 
     $('#audio').attr('src', file).trigger("play");
@@ -71,7 +72,7 @@ function onClick(type, prefix) {
             cancel: false,
             revert: true,
             start: function () {
-                tlink = "voiceprofiles/1/01-"+$(this).attr('data-fname');
+                tlink = "voiceprofiles/"+userId+"/0"+userId+"-"+$(this).attr('data-fname');
                 tname = $(this).attr('value');
                 //console.log($(this));
             }
@@ -135,7 +136,7 @@ function fillVowels(letter, prefix){
             cancel: false,
             revert: true,
             start: function () {
-                tlink = "voiceprofiles/1/01-"+$(this).attr('data-fname');
+                tlink = "voiceprofiles/"+userId+"/0"+userId+"-"+$(this).attr('data-fname');
                 tname = $(this).attr('value');
                 //console.log($(this));
             }

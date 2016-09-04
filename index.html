@@ -127,22 +127,6 @@
                 </div>
             </div>
         </div><br>
-        <div class="row">
-            <div class="col-md-4 optpane">
-                <p>Tone options</p>
-                <span id="pitchSlider" class="hidden">Example slider label</span>
-                <input id="ex19" type="text"
-                    data-provide="slider"
-                    data-slider-ticks="[1, 2, 3]"
-                    data-slider-ticks-labels='["short", "medium", "long"]'
-                    data-slider-min="1"
-                    data-slider-max="3"
-                    data-slider-step="1"
-                    data-slider-value="3"
-                    data-slider-tooltip="hide" />
-
-            </div>
-        </div>
 
         <audio id="audio" preload="auto" controls="">
             <source src=""> HTML5 audio not supported in this browser!
@@ -154,19 +138,19 @@
             <ul id="playlist" class="timeline" draggable="true">
                 <li class="entry">
                     <button id="delete" class="delete">X</button><br>
-                    <a data="voiceprofiles/1/01-3482-3536.wav" data-pitch="N" data-time="N">
+                    <a data="voiceprofiles/1/01-3482-3536.wav" data-pitch="N" data-time="L">
                         a
                     </a>
                 </li>
                 <li class="entry">
                     <button id="delete" class="delete">X</button><br>
-                    <a data="voiceprofiles/1/01-3482-3537.wav" data-pitch="N" data-time="N">
+                    <a data="voiceprofiles/1/01-3482-3537.wav" data-pitch="H" data-time="S">
                         aa
                     </a>
                 </li>
                 <li class="entry">
                     <button id="delete" class="delete btn-tile">X</button><br>
-                    <a data="voiceprofiles/1/01-3482-3542.wav" data-pitch="N" data-time="N">
+                    <a data="voiceprofiles/1/01-3482-3542.wav" data-pitch="L" data-time="N">
                         a
                     </a>
                 </li>
@@ -174,6 +158,41 @@
             </ul>
 
         </div>
+
+        <div class="container well">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Tone options</h4>
+                </div>
+                <div class="col-md-2">
+                    <h3 id="letterEdit"></h3>
+                </div>
+                <div class="col-md-3">
+                    <a class="btn btn-default btn-lg">Reset</a>
+                </div>
+                <div class="col-md-3">
+                    <a id="setopt" class="btn btn-default btn-lg">Apply</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1 col-sm-1">
+                    Pitch
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <input id="pitchSlider" type="text" />
+                </div>
+            </div>
+            <div class="row">&nbsp;	&nbsp;</div>
+            <div class="row">
+                <div class="col-md-1 col-sm-1">
+                    Timing
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <input id="timingSlider" type="text" />
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <!-- Tokenizer Section -->
@@ -239,7 +258,7 @@
     <!-- Control JavaScript -->
     <script src="js/dashboard.js"></script>
     <script src="js/timeline.js"></script>
-
+    <script src="js/index.js"></script>
 </body>
 
 </html>

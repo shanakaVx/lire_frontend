@@ -8,6 +8,7 @@ var audioTL;
 var playlist;
 var tracks;
 var current;
+var selectedPath;
 
 selectedToEdit = null;
 
@@ -29,31 +30,68 @@ $('#playlist').on("click", "button", function () {
 
 
 $('#setopt').click(function(){
-    var pitch = $('#pitchC').val();
-    var path = $('#fpath').val();
-    
+
+    var pitch = "";
+    var timing = "";
+    var path = selectedPath;
     var filename = path.split("/");
     var changedFile = "";
+    var exit = false;
+
+    if(sliderp.bootstrapSlider('getValue') == "1")
+        pitch = "L";
+    if(sliderp.bootstrapSlider('getValue') == "2")
+        pitch = "N";
+    if(sliderp.bootstrapSlider('getValue') == "3")
+        pitch = "H";
+
+    if(slidert.bootstrapSlider('getValue') == "1")
+        timing = "S";
+    if(slidert.bootstrapSlider('getValue') == "2")
+        timing = "N";
+    if(slidert.bootstrapSlider('getValue') == "3")
+        timing = "L";
+
+    var checkFile = "";
+    checkFile = (pitch != "N" ? pitch+"-" : "") + (timing != "N" ? timing+"-" : "") + filename[2];
+
+    console.log(checkFile);
+
+   //check if a file already exsists, if so stop and return that file
+    $.ajax({
+        url:'../FUCKvoiceprofiles/1/'+checkFile,
+        type: 'HEAD',
+        error: function(){
+            console.log("NO FILE");
+            var sendObj = {
+                "filename": filename[2],
+                "pitch": pitch,
+                "timing": timing
+            };
+            //changeProsody(sendObj);
+        },
+        success: function(){
+            console.log("YES FILE");
+        }
+    });
+});
+
+
+function changeProsody(sendObj){
     
-    console.log(filename[2]);
-    
-    var sendObj = {
-        "filename": filename[2],
-        "pitch": pitch
-    };
-    
+    console.log(sendObj);
     $.get(
-          'http://localhost:8080/prosody/changepitch',
+          'http://localhost:8080/prosody/changeprosody',
           sendObj,
           function(data,status){
               console.log(data);
               changedFile = data;
               console.log("Spring server returned : "+status);
-              selectedToEdit.attr("data", "voiceprofiles/01/"+changedFile);
+              selectedToEdit.attr("data", "voiceprofiles/1/"+changedFile);
+              selectedToEdit.attr("data-pitch", pitch);
+              selectedToEdit.attr("data-time", timing);
           });
-});
-
-
+}
 
 
 //initialize all
@@ -96,9 +134,23 @@ function init() {
 
         //$('#options').text("Pitch - "+link.attr("data-pitch")+" timing "+link.attr("data-time"));
 
-        $('#timingT').val(link.attr("data-time"));
-        $('#pitchC').val(link.attr("data-pitch"));
-        $('#fpath').val(link.attr("data"));
+        if(link.attr("data-time") == "S")
+            slidert.bootstrapSlider('setValue', 1);
+        else if(link.attr("data-time") == "N")
+            slidert.bootstrapSlider('setValue', 2);
+        else if(link.attr("data-time") == "L")
+            slidert.bootstrapSlider('setValue', 3);
+
+        if(link.attr("data-pitch") == "L")
+            sliderp.bootstrapSlider('setValue', 1);
+        else if(link.attr("data-pitch") == "N")
+            sliderp.bootstrapSlider('setValue', 2);
+        else if(link.attr("data-pitch") == "H")
+            sliderp.bootstrapSlider('setValue', 3);
+
+        selectedPath = link.attr("data");
+        $('#letterEdit').text(link.text());
+        console.log(selectedPath);
         selectedToEdit = link;
     });
 
@@ -153,7 +205,7 @@ $(document).ready(function () {
             alert(tlink);
             lin = '<li class = "entry">\n\
                   <button id="delete" class="delete">X</button><br>\n\
-                  <a data="' + tlink + '.wav" data-pitch="H" data-time="N">' + tname + '\
+                  <a data="' + tlink + '.wav" data-pitch="N" data-time="N">' + tname + '\
                   </a>\n\
               </li>';
             $('#playlist').append(lin);
