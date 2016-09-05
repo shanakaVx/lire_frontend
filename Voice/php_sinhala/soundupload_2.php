@@ -3,16 +3,17 @@
 
 $uploadpath = 'Direct_upload//2/';      // directory to store the uploaded files
 $max_size = 30000;          // maximum file size, in KiloBytes
-$alwidth = 900;            // maximum allowed width, in pixels
-$alheight = 800;           // maximum allowed height, in pixels
-$allowtype = array('wav', 'mp3', 'm4a');        // allowed extensions
+
+$allowtype = array('wav');        // allowed extensions
 
 if(isset($_FILES['fileup']) && strlen($_FILES['fileup']['name']) > 1) {
   $uploadpath = $uploadpath . basename( $_FILES['fileup']['name']);       // gets the file name
+  
   $sepext = explode('.', strtolower($_FILES['fileup']['name']));
   $type = end($sepext);       // gets extension
   list($width, $height) = getimagesize($_FILES['fileup']['tmp_name']);     // gets image width and height
   $err = '';         // to store the errors
+  
 
   // Checks if the file has allowed type, size, width and height (for images)
   if(!in_array($type, $allowtype)) $err .= 'The file: <b>'. $_FILES['fileup']['name']. '</b> not has the allowed extension type.';
