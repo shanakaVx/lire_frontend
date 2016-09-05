@@ -55,6 +55,7 @@ table {
     outline: none;
     color: black;
     background-color: #5da2e8;
+    z-index: 2;
 }
 
 .optpane {

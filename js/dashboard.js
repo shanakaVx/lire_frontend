@@ -10,12 +10,14 @@ var tname = "";
 var vmods = "";
 var consonants = "";
 var userId = 1;
+var vowels = "";
+var lettersObj = "";
 
 $.getJSON("./letters-si.json",function(data){
+    lettersObj = data;
     console.log(data);
     vmods = data.vmod;
-    consonants = data.consonant;
-    
+    consonants = data.consonant; 
 });
 
 $(document).ready(function(){
@@ -83,6 +85,11 @@ function onClick(type, prefix) {
 
 
 
+$('#btnVowelsSi').click(function(){
+    fillPureVowels("vowelsSi");
+});
+
+
 
 function fillVowels(letter, prefix){
     var append = "<table id='consa' border='0'>\n\
@@ -145,4 +152,79 @@ function fillVowels(letter, prefix){
     //console.log(append);
     return append;
 
+}
+
+
+
+/**
+ * @desc appending pure vowels
+ */
+function fillPureVowels(language){
+    //vowelsSi
+    if(language == "vowelsSi")
+        vowels = lettersObj.vowelsSi;
+    
+    console.log(language);
+
+    var append = "<table id='consa' border='0'>\n\
+                    <tr>\n\
+                        <td>a</td>\n\
+                        <td>ā</td>\n\
+                        <td>æ</td>\n\
+                        <td>ǣ</td>\n\
+                        <td>i</td>\n\
+                        <td>ī</td>\n\
+                    </tr>\n\
+                    <tr>";
+    
+    var count = 0;
+    for(var key in vowels){
+        count ++;
+        var akura = vowels[key].letter;
+        var id = vowels[key].id;
+        //console.log(akura+" "+id);
+
+        append += "<td><input class='bt tone' type='button' value='"+akura+"' onclick=\"onClick('vowel', '"+id+"')\" data-fname='"+id+"'/></td>";
+
+        if(count == 6){
+            append += "</tr>\n\
+                            <tr>\n\
+                                <td>u</td>\n\
+                                <td>ū</td>\n\
+                                <td>e</td>\n\
+                                <td>ē</td>\n\
+                                <td>ai</td>\n\
+                                <td>o</td>\n\
+                            </tr>\n\
+                            <tr>";
+        }
+        if(count == 12){
+            append += "</tr>\n\
+                            <tr>\n\
+                                <td>ō</td>\n\
+                                <td>au</td>\n\
+                                <td></td>\n\
+                                <td></td>\n\
+                                <td></td>\n\
+                                <td></td>\n\
+                            </tr>\n\
+                            <tr>";
+        }
+        
+    }
+    append += "</tr></table>";
+    $('#keys').html(append);
+        //activatwe dragg and drop
+        $('#consa input').draggable({
+            cancel: false,
+            revert: true,
+            start: function () {
+                tlink = "voiceprofiles/"+userId+"/0"+userId+"-"+$(this).attr('data-fname');
+                tname = $(this).attr('value');
+                //console.log($(this));
+            }
+        });
+
+    console.log(append);
+    
 }

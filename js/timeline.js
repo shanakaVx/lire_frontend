@@ -269,3 +269,32 @@ function fillTimeline(data){
 
     }
 }
+
+
+$('#btnDownload').click(function(){
+    var sendObj = [];
+    var downPath = "";
+
+    $('#playlist').find('a').each(function(){
+        var fname = $(this).attr("data").split("/");
+        sendObj.push(fname[2]);
+    });
+    console.log(sendObj);
+
+    $.ajax({
+        url:"URL/URL/URL",
+        type: 'POST',
+        data: sendObj,
+        error: function(data){
+            console.log(data);
+        },
+        success: function(data){
+            console.log(data);
+            downPath = "voiceprofiles/download/"+data;
+            $('#downSec').html('<a href="'+downPath+'" id="btnDownload" class="btn btn-default btn-lg" download>Download as WAV</a>');
+        }
+    });
+
+
+    
+});
