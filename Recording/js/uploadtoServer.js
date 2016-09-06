@@ -12,4 +12,4 @@ function upload(blob) {
 }
 
 
-Runtime.getRuntime().exec("path\\to\\ffmpeg\\ffmpeg-20160517-git-af3e944-win64-static\\bin\\ffmpeg -i C:\\Users\\vcaldsh\\Desktop\\Voice_222.m4a -af silenceremove=1:0:-30dB:0:1:-30dB outPut222.m4a");
+//Runtime.getRuntime().exec("path\\to\\ffmpeg\\ffmpeg-20160517-git-af3e944-win64-static\\bin\\ffmpeg -i C:\\Users\\vcaldsh\\Desktop\\Voice_222.m4a -af silenceremove=1:0:-30dB:0:1:-30dB outPut222.m4a");
