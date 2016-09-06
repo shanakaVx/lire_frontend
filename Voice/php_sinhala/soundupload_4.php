@@ -1,7 +1,7 @@
 <?php
 // PHP Upload Script
 
-$uploadpath = 'Direct_upload//2/';      // directory to store the uploaded files
+$uploadpath = 'Direct_upload//4/';      // directory to store the uploaded files
 $max_size = 20000;          // maximum file size, in KiloBytes
 
 $allowtype = array('wav');        // allowed extensions
@@ -22,7 +22,7 @@ if(isset($_FILES['fileup']) && strlen($_FILES['fileup']['name']) > 1) {
   
   
   $fname=	$_FILES['fileup']['name'];
-	 $newsave='Affter_ffmpeg//2/'.$fname;
+	 $newsave='Affter_ffmpeg//4/'.$fname;
   
   
   if (file_exists($uploadpath)) {
