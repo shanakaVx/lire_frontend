@@ -228,14 +228,15 @@ $(document).ready(function () {
  $('#playlist').sortable();
 
 
-$('#tokenize').click(function(){
+$('#btnTokenizer').click(function(){
 
-    var text = $('#inputText').val();
-        alert(text);
-    
+    var text = $('#txtTokenize').val();
+
     var sendObj = {
         "text": text
     };
+    //return;
+    console.log(text + lettersObj);
     
     $.get(
           'http://localhost:8080/tokenize/directTokenize',
@@ -249,15 +250,15 @@ $('#tokenize').click(function(){
 
 
 function fillTimeline(data){
-    var basePath = "voiceprofiles/01/";
+    var basePath = "voiceprofiles/1/";
     for(var key in data){
         var arr = data[key][0];
         
         for(var k in arr){
-            
+
             var append = '<li class = "entry">\n\
-                                <a data="'+ basePath+arr[k]+'.wav" data-pitch="N" data-time="N">' + arr[k] + '\
-                                </a><button id="delete" class="delete">X</button>\n\
+                                <button id="delete" class="delete">X</button><br>\n\
+                                <a data="'+ basePath+arr[k]+'.wav" data-pitch="N" data-time="N">' + getLetterName(arr[k]) + '</a>\n\
                           </li>';
             
             console.log(append);
@@ -293,8 +294,36 @@ $('#btnDownload').click(function(){
             downPath = "voiceprofiles/download/"+data;
             $('#downSec').html('<a href="'+downPath+'" id="btnDownload" class="btn btn-default btn-lg" download>Download as WAV</a>');
         }
-    });
-
-
-    
+    });    
 });
+
+
+function getLetterName(num){
+    //01-3461-2230.wav
+    var parts = num.split("-");
+    var letter = "";
+
+    if((parts[1] >= 3461) && (parts[1] <= 3478)){
+        vowels = lettersObj.vowelsSi;
+        for(var key in vowels){
+            if(vowels[key].id == parts[1])
+                letter += vowels[key].letter;
+        }
+        return letter;
+    }
+
+    if(parts.length <= 3){
+        for(var key in consonants){
+            if(consonants[key].id == parts[1])
+                letter += consonants[key].letter;
+        }
+        for(var key in vmods){
+            if(vmods[key].id == parts[2])
+                 letter += vmods[key].letter;
+        }
+        return letter;
+    }
+
+    return "";
+
+}
