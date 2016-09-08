@@ -228,6 +228,7 @@ $(document).ready(function () {
  $('#playlist').sortable();
 
 
+
 $('#btnTokenizer').click(function(){
 
     var text = $('#txtTokenize').val();
@@ -247,6 +248,7 @@ $('#btnTokenizer').click(function(){
           });
     
 });
+
 
 
 function fillTimeline(data){
@@ -272,22 +274,36 @@ function fillTimeline(data){
 }
 
 
+
+$('#btnClear').click(function(){
+    clearTimeline();
+    //<a id="btnDownload" class="btn btn-default btn-lg">Prepare download</a>
+    $('#downSec').html('<a id="btnDownload" class="btn btn-default btn-lg">Prepare download</a>');
+});
+
+
+
 $('#btnDownload').click(function(){
-    var sendObj = [];
+    var sendObj = "";
     var downPath = "";
 
     $('#playlist').find('a').each(function(){
         var fname = $(this).attr("data").split("/");
-        sendObj.push(fname[2]);
+        //sendObj.push(fname[2]);
+        sendObj += fname[2]+",";
     });
     console.log(sendObj);
 
+    var send = {
+        "tones": sendObj
+    };
+
     $.ajax({
-        url:"URL/URL/URL",
-        type: 'POST',
-        data: sendObj,
+        url:"http://localhost:8080/download",
+        type: 'GET',
+        data: send,
         error: function(data){
-            console.log(data);
+            console.log(data+" at errorrra");
         },
         success: function(data){
             console.log(data);
@@ -323,7 +339,12 @@ function getLetterName(num){
         }
         return letter;
     }
-
     return "";
+}
 
+function clearTimeline(){
+    $('#playlist').html("");
+    tracks = playlist.find('li a');
+    len = tracks.length;
+    $('#audio').get(0).pause();
 }
