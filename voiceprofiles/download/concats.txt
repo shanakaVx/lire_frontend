@@ -1,0 +1,7 @@
+file 'C:\wamp\www\LireFrontend\voiceprofiles\1\01-3501-3549.wav'
+file 'C:\wamp\www\LireFrontend\voiceprofiles\1\01-3526.wav'
+file 'C:\wamp\www\LireFrontend\voiceprofiles\1\01-3482-3538.wav'
+file 'C:\wamp\www\LireFrontend\voiceprofiles\1\01-3505-3530.wav'
+file 'C:\wamp\www\LireFrontend\voiceprofiles\1\01-3517-3548.wav'
+file 'C:\wamp\www\LireFrontend\voiceprofiles\1\01-3517-3530.wav'
+file 'C:\wamp\www\LireFrontend\voiceprofiles\1\01-3517-3535.wav'
