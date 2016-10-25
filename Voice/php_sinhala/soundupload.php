@@ -21,7 +21,7 @@ if(isset($_FILES['fileup']) && strlen($_FILES['fileup']['name']) > 1) {
   
   
   $fname=	$_FILES['fileup']['name'];
-	 $newsave='Affter_ffmpeg//1/'.$fname;
+	 $newsave='Affter_ffmpeg//UVProfileSinhala/'.$fname;
   
   
   if (file_exists($uploadpath)) {
