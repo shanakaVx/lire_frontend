@@ -22,7 +22,7 @@ if(isset($_FILES['fileup']) && strlen($_FILES['fileup']['name']) > 1) {
   
   
   $fname=	$_FILES['fileup']['name'];
-	 $newsave='Affter_ffmpeg//UVProfileSinhala/'.$fname;
+//	 $newsave='Affter_ffmpeg//UVProfileSinhala/'.$fname;
   
   
   if (file_exists($uploadpath)) {
@@ -39,9 +39,9 @@ if(isset($_FILES['fileup']) && strlen($_FILES['fileup']['name']) > 1) {
 	 
 	 
 	  
-	echo "<br/> Starting ffmpeg...\n\n<br>";
-	$cmd = "C:\\ffmpeg\\bin\\ffmpeg -i ".$uploadpath." -af silenceremove=1:0:-30dB:0:1:-30dB ".$newsave.""; 
-	shell_exec($cmd);
+//	echo "<br/> Starting ffmpeg...\n\n<br>";
+//	$cmd = "C:\\ffmpeg\\bin\\ffmpeg -i ".$uploadpath." -af silenceremove=1:0:-30dB:0:1:-30dB ".$newsave.""; 
+//	shell_exec($cmd);
 	
 	
 	  
