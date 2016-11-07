@@ -240,6 +240,22 @@ a:focus {
     -o-background-size: cover;
 }
 
+.api-section {
+    width: 100%;
+    padding: 50px 0;
+    color: white;
+    background: url(../img/btype.jpg) no-repeat center center scroll;
+    background-color: black;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, 100% 100%;
+    background-position: center center, 0% 0%;
+    background-attachment: fixed, scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
 .dashboard-section{
     width: 100%;
     padding: 50px 0;

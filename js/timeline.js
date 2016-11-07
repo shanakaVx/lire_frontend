@@ -3,6 +3,10 @@
 //Timeline automated control
 //tracks are set to play one after the other here
 
+var appKey;
+var userName;
+var uid = "1";
+var afterProsody = [];
 
 var audioTL;
 var playlist;
@@ -29,7 +33,7 @@ $('#playlist').on("click", "button", function () {
 });
 
 
-$('#setopt').click(function(){
+$('#setPitch').click(function(){
 
     var pitch = "";
     var timing = "";
@@ -45,20 +49,13 @@ $('#setopt').click(function(){
     if(sliderp.bootstrapSlider('getValue') == "3")
         pitch = "H";
 
-    if(slidert.bootstrapSlider('getValue') == "1")
-        timing = "S";
-    if(slidert.bootstrapSlider('getValue') == "2")
-        timing = "N";
-    if(slidert.bootstrapSlider('getValue') == "3")
-        timing = "L";
-
     var sendObj = {
         "filename": filename[2],
         "pitch": pitch,
-        "timing": timing
+        "appk": appKey
     };
 
-    changeProsody(sendObj, pitch, timing);
+    changePitch(sendObj, pitch, timing);
 
 /*
     var checkFile = "";
@@ -84,17 +81,69 @@ $('#setopt').click(function(){
 });
 
 
-function changeProsody(sendObj, pitch, timing){
+$('#setTime').click(function(){
+
+    var pitch = "";
+    var timing = "";
+    var path = selectedPath;
+    var filename = path.split("/");
+    var changedFile = "";
+    var exit = false;
+
+    if(slidert.bootstrapSlider('getValue') == "1")
+        timing = "ST";
+    if(slidert.bootstrapSlider('getValue') == "2")
+        timing = "N";
+    if(slidert.bootstrapSlider('getValue') == "3")
+        timing = "LT";
+
+    var sendObj = {
+        "filename": filename[2],
+        "timing": timing,
+        "appk": appKey
+    };
+
+    changeTiming(sendObj, pitch, timing);
+});
+
+
+function changePitch(sendObj, pitch, timing){
     console.log(sendObj);
     $.get(
           'http://localhost:8080/prosody/changeprosody',
           sendObj,
           function(data,status){
               console.log(data);
+              if(data == "needLogin"){
+                  alert("You need to login to do this");
+                  return;
+              }
+
               changedFile = data;
               console.log("Spring server returned : "+status);
               selectedToEdit.attr("data", "voiceprofiles/1/"+changedFile);
               selectedToEdit.attr("data-pitch", pitch);
+              //selectedToEdit.attr("data-time", timing);
+          });
+}
+
+
+function changeTiming(sendObj, pitch, timing){
+    console.log(sendObj);
+    $.get(
+          'http://localhost:8080/prosody/changetiming',
+          sendObj,
+          function(data,status){
+              console.log(data);
+              if(data == "needLogin"){
+                  alert("You need to login to do this");
+                  return;
+              }
+
+              changedFile = data;
+              console.log("Spring server returned : "+status);
+              selectedToEdit.attr("data", "voiceprofiles/1/"+changedFile);
+              //selectedToEdit.attr("data-pitch", pitch);
               selectedToEdit.attr("data-time", timing);
           });
 }
@@ -234,7 +283,8 @@ $('#btnTokenizer').click(function(){
     var text = $('#txtTokenize').val();
 
     var sendObj = {
-        "text": text
+        "text": text,
+        "appk": appKey
     };
     //return;
     console.log(text + lettersObj);
@@ -244,33 +294,67 @@ $('#btnTokenizer').click(function(){
           sendObj,
           function(data, status){
               console.log(data);
+              if(data == ""){
+                  alert("Please to login to tokenize more letters");
+                  return;
+              }
               fillTimeline(data);
           });
-    
 });
 
 
 
 function fillTimeline(data){
     var basePath = "voiceprofiles/1/";
+    var previous = "";
+    var pos = 0;
     for(var key in data){
         var arr = data[key][0];
         
         for(var k in arr){
+            var pro = "";
+            console.log(arr[k]);
+            switch (arr[k]){
+                case "-46":
+                    pro = "L";
+                    break;
+                case "-33":
+                    pro = "LT";
+                    break;
+                case "-44":
+                    pro = "L";
+                    break;
+                case "-63":
+                    pro = "H";
+                    break; 
+            }
 
+            if(pro != ""){
+               afterProsody.push({
+                    "prosody": pro,
+                    "file": previous,
+                    "pos": pos
+                });
+
+            }
+        
             var append = '<li class = "entry">\n\
                                 <button id="delete" class="delete">X</button><br>\n\
-                                <a data="'+ basePath+arr[k]+'.wav" data-pitch="N" data-time="N">' + getLetterName(arr[k]) + '</a>\n\
+                                <a data="'+ basePath+'0'+uid+arr[k]+'.wav" data-pitch="N" data-time="N">' + getLetterName(arr[k]) + '</a>\n\
                           </li>';
-            
+
+            previous = '0'+uid+arr[k]+'.wav';
             console.log(append);
             $('#playlist').append(append);
             tracks = playlist.find('li a');
             len = tracks.length;
             $('#opt').html("Current " + current + "<br>No of tracks " + len);
+            pos++;
         }
 
     }
+
+    console.log(afterProsody);
 }
 
 

@@ -75,6 +75,12 @@
                     <li>
                         <a class="page-scroll" href="#about">About Lire</a>
                     </li>
+                    <li id="loginLink">
+                        <a class="page-scroll" href="#login" data-toggle="modal" data-target="#modalLogin">Login</a>
+                    </li> 
+                    <li id="regLink">
+                        <a class="page-scroll" href="#login" data-toggle="modal" data-target="#modalRegister">Register</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -170,14 +176,17 @@
                 <div class="col-md-2">
                     <h3 id="letterEdit"></h3>
                 </div>
-                <div class="col-md-2">
-                    <a id="btnClear" class="btn btn-default btn-lg">Reset</a>
+                <div class="col-md-2" style="width: 6%;">
+                    <a id="btnClear" style="font-size: 12px;" class="btn btn-default btn-lg">Reset</a>
                 </div>
-                <div class="col-md-2">
-                    <a id="setopt" class="btn btn-default btn-lg">Apply</a>
+                <div class="col-md-2" style="width: 12%;">
+                    <a style="font-size: 12px;" id="setTime" class="btn btn-default btn-lg">Change timing</a>
                 </div>
-                <div class="col-md-4" id="downSec">
-                    <a id="btnDownload" class="btn btn-default btn-lg">Prepare download</a>
+                <div class="col-md-2" style="width: 12%;">
+                    <a style="font-size: 12px;" id="setPitch" class="btn btn-default btn-lg">Change Pitch</a>
+                </div>
+                <div class="col-md-2" id="downSec" style="width: 12%;">
+                    <a style="font-size: 12px;" id="btnDownload" class="btn btn-default btn-lg">Prepare download</a>
                     <!--<a href="voiceprofiles/1/01-3482.wav" id="btnDownload" class="btn btn-default btn-lg" download>Downlaod as WAV</a>-->
                 </div>
             </div>
@@ -222,6 +231,26 @@
         </div>
     </section>
 
+        <!-- API sales Section -->
+    <section id="api" class="api-section text-center">
+        <div class="api-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h2>Buy an API plan</h2>
+                        <p>select the plan most suitable to your need</p>
+                        <a id="btnTokenizer" class="btn btn-default btn-lg">Read!</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="container content-section text-center">
         <div class="row">
@@ -246,6 +275,113 @@
     </section>
 
 
+<!-- Login modal Modal content -->
+
+<div id="modalLogin" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Login to Lire</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-md-3">
+                <label for="txtUsername">Email:</label>
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="txtUsername">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label for="txtPassword">Password:</label>
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="txtPassword">
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="btnLogin" type="button" class="btn btn-default" data-dismiss="modal">Login</button>
+        <button id="btnCancel" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Register modal Modal content -->
+
+<div id="modalRegister" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Register with Lire</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-md-3">
+                <label for="txtRegUsername">Email:</label>
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="txtRegUsername">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label for="txtRegPassword">Password:</label>
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="txtRegPassword">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label for="txtRegPassword">Re type Password:</label>
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="txtRegPassword">
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="btnRegister" type="button" class="btn btn-default" data-dismiss="modal">Register</button>
+        <button id="btnRegCancel" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- Logout modal Modal content -->
+
+<div id="modalLogout" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Do you want to logout from Lire</h4>
+      </div>
+      <div class="modal-footer">
+        <button id="btnLogout" type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
+        <button id="btnCancel" type="button" class="btn btn-default" data-dismiss="modal">Not now</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
     <!-- Footer -->
     <footer>
         <div class="container text-center">
@@ -256,7 +392,10 @@
 
     <!-- Loading Javascripts -->
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery-3.1.0.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
     <script src="vendor/jquery/jquery-ui.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
@@ -273,6 +412,7 @@
     <script src="js/dashboard.js"></script>
     <script src="js/timeline.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/userCtrl.js"></script>
 </body>
 
 </html>
