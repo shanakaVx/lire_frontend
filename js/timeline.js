@@ -3,7 +3,7 @@
 //Timeline automated control
 //tracks are set to play one after the other here
 
-var appKey;
+var appKey = "0";
 var userName;
 var uid = "1";
 var afterProsody = [];
@@ -13,6 +13,8 @@ var playlist;
 var tracks;
 var current;
 var selectedPath;
+
+var prosodyArrSize = 0;
 
 selectedToEdit = null;
 
@@ -316,20 +318,21 @@ function fillTimeline(data){
             console.log(arr[k]);
             switch (arr[k]){
                 case "-46":
-                    pro = "L";
+                    pro = "P,L";
                     break;
                 case "-33":
-                    pro = "LT";
+                    pro = "T,LT";
                     break;
                 case "-44":
-                    pro = "L";
+                    pro = "P,L";
                     break;
                 case "-63":
-                    pro = "H";
+                    pro = "P,H";
                     break; 
             }
 
             if(pro != ""){
+                prosodyArrSize++;
                afterProsody.push({
                     "prosody": pro,
                     "file": previous,
@@ -355,9 +358,116 @@ function fillTimeline(data){
     }
 
     console.log(afterProsody);
+    addProsody(0);
 }
 
 
+function addProsody(key) {
+
+    if(appKey == "0"){
+        alert("You have to login to experience the prosodistic nature of the speech\nJust speech is played for a visitor");
+        return;
+    } 
+
+    console.log("calling- key = "+key);
+
+    if (key >= prosodyArrSize) {
+        selectedToEdit = null;
+        console.log("returned");
+        return;
+    }
+
+    var prosody = afterProsody[key].prosody.split(',');
+    selectedToEdit = $("#playlist :nth-child(" + afterProsody[key].pos + ")").find('a');
+    console.log("changing = "+selectedToEdit.text());
+
+    if (prosody[0] == "T") {
+        //change pitch
+        console.log("time changing "+ afterProsody[key].pos);
+
+        var sendObj = {
+            "filename": afterProsody[key].file,
+            "timing": prosody[1],
+            "appk": appKey
+        };
+
+        console.log(sendObj);
+        $.ajax({
+            type: 'GET',
+            url: 'http://localhost:8080/prosody/changetiming',
+            data: sendObj,
+            success: function(data,status){
+                console.log(data);
+                if(data == "needLogin"){
+                    return;
+                }
+
+                changedFile = data;
+                console.log("Spring server returned with dynamic timing: "+status);
+                selectedToEdit.attr("data", "voiceprofiles/1/"+changedFile);
+                selectedToEdit.attr("data-time", prosody[1]);
+                //on callback
+                addProsody(key + 1);
+            },
+            error: function(){
+                console.log("Error callback");
+                addProsody(key + 1);
+            }
+        });
+    }
+
+    else if (prosody[0] == "P") {
+        //change timing
+        console.log("pitch changing "+ afterProsody[key].pos);
+
+        var sendObj = {
+            "filename": afterProsody[key].file,
+            "pitch": prosody[1],
+            "appk": appKey
+        };
+
+        console.log(sendObj);
+        $.ajax({
+            type: 'GET',
+            url :'http://localhost:8080/prosody/changeprosody',
+            data: sendObj,
+            success: function(data,status){
+                    console.log(data);
+                    if(data == "needLogin"){
+                        //alert("You need to login to do this");
+                        return;
+                    }
+
+                    changedFile = data;
+                    console.log("Spring server returned for dynamic pitch: "+status);
+                    selectedToEdit.attr("data", "voiceprofiles/1/"+changedFile);
+                    selectedToEdit.attr("data-pitch", prosody[1]);
+                    //on callback
+                    addProsody(key + 1);
+                },
+            error: function(data){
+                console.log("Error callback");
+                 addProsody(key + 1);
+            }
+        });
+
+    }
+}
+
+/*
+$.ajax({
+    type: 'get',
+    url: 'manageproducts.do',
+    data: 'option=1',
+    success: function(data) {
+
+        availableProductNames = data.split(",");
+
+        alert(availableProductNames);
+
+    }
+});
+*/
 
 $('#btnClear').click(function(){
     clearTimeline();
@@ -379,7 +489,8 @@ $('#btnDownload').click(function(){
     console.log(sendObj);
 
     var send = {
-        "tones": sendObj
+        "tones": sendObj,
+        "appk": appKey
     };
 
     $.ajax({
