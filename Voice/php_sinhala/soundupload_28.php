@@ -13,7 +13,7 @@ if(isset($_FILES['fileup']) && strlen($_FILES['fileup']['name']) > 1) {
 
   $err = '';         // to store the errors
 
-  // Checks if the file has allowed type, size, width and height (for images)
+  // Checks if the file has allowed type
   if(!in_array($type, $allowtype)) $err .= 'The file: <b>'. $_FILES['fileup']['name']. '</b> not has the allowed extension type.';
   if($_FILES['fileup']['size'] > $max_size*1000) $err .= '<br/>Maximum file size must be: '. $max_size. ' KB.';
  
@@ -37,14 +37,40 @@ if(isset($_FILES['fileup']) && strlen($_FILES['fileup']['name']) > 1) {
 	 
 	  
 
+//************************************************
+      
+$servername = "localhost:3306";
+$username = "root";
+$password = "sA456";
+$dbname = "lire";
 
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT uid, appKey FROM users";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+       // echo "uid: " . $row["uid"]. "<br>";
+        
+       //  echo "ud: " . $row["uid"]. " - Name: " . $row["appKey"]. "<br>";
+   
+
+ 
 //  ********************************************
          
      $namefile=$_FILES['fileup']['name'];    
      $url = "http://localhost:8080/recording/record";
      
-     $data = array('uid'=>'205','folder'=>'28','fname'=>(string)$namefile);
-   
+     $data = array('uid'=>(string)$row["uid"],'folder'=>'28','fname'=>(string)$namefile,'appk'=>(string)$row["appKey"]);
+   //echo "ud: " . $row["uid"]. " - Name: " . $row["appKey"]. "<br>";
+     
     function sendPostData($url,$data){
   // Initialize and get the curl handle
   $ch = curl_init();
@@ -71,7 +97,10 @@ if(isset($_FILES['fileup']) && strlen($_FILES['fileup']['name']) > 1) {
                                     }  
                                     
 sendPostData($url, $data);
-      
+      }
+} else {
+    echo "0 results";
+} 
       
 	  
       echo '<br/>File type: <b>'. $_FILES['fileup']['type'] .'</b>';
@@ -86,5 +115,7 @@ sendPostData($url, $data);
   }
   //else echo $err;
 }
+mysqli_close($conn);
+
 ?> 
 
