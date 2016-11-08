@@ -138,7 +138,7 @@ function submitform(xxx)
        }
       
 	    
-	  if(xxx=='T' || xxx=='RU' || xxx=='VA' || xxx=='A' || xxx=='U' || xxx=='E' || xxx=='OR' || xxx=='LA'){
+	  if(xxx=='GA' || xxx=='SA' || xxx=='VA' || xxx=='A' || xxx=='U' || xxx=='E' || xxx=='OR' || xxx=='LA'){
 	   
 	   //alert('ok');
 	   xmlhttp.open("POST", "test.php?cha="+xxx);
@@ -169,14 +169,14 @@ function submitform(xxx)
         <div class="row">
 	
 <form name="foo" action="" method="POST" id="foo">
-<img src="images/star.jpg"/>
+<img src="images/tree.jpg" width="30%"/>
 <div class="drop mobiledraganddrop1drop mobiledraganddrop2drop" onclick="refresh();"   id="drop2">
 <div style="clear: both;"><p>You can drop Characters here.</p></div>
 </div>
 
-<audio id="sound1" src="tha.wav"></audio>
-<audio id="sound2" src="ru.wav"></audio>
-<audio id="sound3" src="va.wav"></audio>
+<audio id="sound1" src="ga.mp3"></audio>
+<audio id="sound2" src="sa.mp3"></audio>
+
 	
 
 
@@ -185,15 +185,15 @@ function submitform(xxx)
 			 <table  class="table table-bordered">
   
     <tr>
-        <td><input class="drag mobiledraganddrop1drag" id="drag" style="font-size:30px;width:80px;background-color:black" type="button" value="අ" onclick="submitform('A'); return false;"/></td>
+        <td><input class="drag mobiledraganddrop1drag" id="drag" style="font-size:30px;width:80px;background-color:black" type="button" value="ම" onclick="submitform('MA'); return false;"/></td>
         <td><input class="drag mobiledraganddrop1drag" id="drag1" style="font-size:30px;width:80px;background-color:black" type="button" value="උ" onclick="submitform('U'); return false;"/></td>
         <td><input class="drag mobiledraganddrop1drag" id="drag2" style="font-size:30px;width:80px;background-color:black" type="button" value="එ" onclick="submitform('E'); return false;"/></td>
-        <td><input class="drag mobiledraganddrop1drag" id="drag3" style="font-size:30px;width:80px;background-color:black" type="button" value="ඔ" onclick="submitform('O'); return false;"/></td>
+        <td><input class="drag mobiledraganddrop1drag" id="drag3" style="font-size:30px;width:80px;background-color:black" type="button" value="ග" onclick="submitform('GA'); return false;"/></td>
         <td><input class="drag mobiledraganddrop1drag" id="drag4" style="font-size:30px;width:80px;background-color:black" type="button" value="ඊ" onclick="submitform('RR'); return false;"/></td>
         <td><input class="drag mobiledraganddrop1drag" id="drag5" style="font-size:30px;width:80px;background-color:black" type="button" value="ත" onclick="submitform('T'); return false;"/></td>
          <td><input class="drag mobiledraganddrop1drag" id="drag6" style="font-size:30px;width:80px;background-color:black" type="button" value="රු" onclick="submitform('RU'); return false;"/></td>
         
-		 <td><input class="drag mobiledraganddrop1drag" id="drag7" style="font-size:30px;width:80px;background-color:black" type="button" value="ල" onclick="submitform('LA'); return false;"/></td>
+		 <td><input class="drag mobiledraganddrop1drag" id="drag7" style="font-size:30px;width:80px;background-color:black" type="button" value="ස" onclick="submitform('SA'); return false;"/></td>
         
 		 <td><input class="drag mobiledraganddrop1drag" id="drag8" style="font-size:30px;width:80px;background-color:black" type="button" value="රේ" onclick="submitform('RE'); return false;"/></td>
         
@@ -222,7 +222,7 @@ function submitform(xxx)
 		  <form action="" method="POST">
 		  <input type="submit" value="Submit Your Answer" name="btnnext" class="btn btn-primary"/>
 		  
-		  <a href="drag1.php" class="btn btn-danger">Next Question >></a>
+		  <a href="drag2.php" class="btn btn-danger">Next Question >></a>
 		  </form>
 		  <?php
 			
@@ -231,21 +231,21 @@ function submitform(xxx)
 					
 					mysql_select_db("sinhala") or die(mysql_error());
 					
-					$result1 = mysql_query("SELECT * FROM game")
+					$result1 = mysql_query("SELECT * FROM game WHERE id='"."3"."'")
 					or die(mysql_error()); 
 					
 		while($row1 = mysql_fetch_array($result1)){
-		if($row1['w1']=='T' && $row1['w2']=='RU' && $row1['w3']=='VA'){
+		if($row1['w1']=='GA' && $row1['w2']=='SA'){
 		
 		
 		
-		/*echo "<script> var audio1 = document.getElementById('sound1');
+		echo "<script> var audio1 = document.getElementById('sound1');
 var audio2 = document.getElementById('sound2');
-var audio3 = document.getElementById('sound3');
+
 
  audio1.play();
- audio2.play();
-  audio3.play();
+  audio2.play();
+  
 
 ";
 
@@ -255,22 +255,7 @@ echo "alert('Hello!.. Your Answer Is Correct');</script>";
 		
 		}else{
 		
-		echo "<script> alert('Hello!.. Your Answer Is Wrong..Please Try Again!!');</script>";*/
-		echo "<script>var snd1 = new Audio('tharuwa.wav');";
-
-echo "snd1.play(); alert('Hello!.. Your Answer Is Correct');</script>";
-		
-		//header( "refresh:5;url=wherever.php" );
-	//header('Location:drag1.php');
-	//header("refresh:2;url=drag1.php); 
-//echo 'this is a test';
-exit;
-return 0;
-		
-		}else{
-		
 		echo "<script> alert('Hello!.. Your Answer Is Wrong..Please Try Again!!');</script>";
-		
 		
 		
 		}

@@ -60,7 +60,7 @@
                         <a href="manage_words.php">Manage Words</a>
                     </li>
  <li>
-                        <a href="drag.php">Drag Game</a>
+                        <a href="drag.php">Game</a>
                     </li>
 					
                 </ul>
@@ -97,7 +97,7 @@ function onClick(di,a) {
 var path;
 if(pa=='1'){
 
-path="voice/sounds";
+path="voice/sounds_child";
 
 }
 else if(pa=='2'){
@@ -142,10 +142,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
                     <td>nnga</td>
                 </tr>
                 <tr>
-                    <td><input   class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ක" onclick="onClick('consonent', '01-3482');showDiv1()"/></td>
-                    <td><input  class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඛ" onclick="onClick('consonent', '01-3483');showDiv2()"/></td>
-                    <td><input  class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ග" onclick="onClick('consonent', '01-3484');showDiv3()"/></td>
-                    <td><input  class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඝ" onclick="onClick('consonent', '1-3485');showDiv4()"/></td>
+                    <td><input   class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ක" onclick="onClick('consonent', '3482');showDiv1()"/></td>
+                    <td><input  class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඛ" onclick="onClick('consonent', '3483');showDiv2()"/></td>
+                    <td><input  class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ග" onclick="onClick('consonent', '3484');showDiv3()"/></td>
+                    <td><input  class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඝ" onclick="onClick('consonent', '3485');showDiv4()"/></td>
                     <td><input  class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඞ" onclick="onClick('consonent', 'nga');showDiv5()"/></td>
                     <td><input  class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඟ" onclick="onClick('consonent', '01-3487');showDiv6()"/></td>
                 </tr>
@@ -270,12 +270,12 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>ī</td>
     </tr>
     <tr>
-        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="අ" onclick="onClick('vowel', '01-3461')"/></td>
-        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ආ" onclick="onClick('vowel', '01-3462')"/></td>
-        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඇ" onclick="onClick('vowel', '01-3463')"/></td>
-        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඈ" onclick="onClick('vowel', '01-3464')"/></td>
-        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඉ" onclick="onClick('vowel', '01-3465')"/></td>
-        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඊ" onclick="onClick('vowel', '01-3466')" /></td>
+        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="අ" onclick="onClick('vowel', '3461')"/></td>
+        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ආ" onclick="onClick('vowel', '3462')"/></td>
+        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඇ" onclick="onClick('vowel', '3463')"/></td>
+        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඈ" onclick="onClick('vowel', '3464')"/></td>
+        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඉ" onclick="onClick('vowel', '3465')"/></td>
+        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඊ" onclick="onClick('vowel', '3466')" /></td>
     </tr>
     <tr style='font-weight:bold;'>
         <td>u</td>
@@ -286,10 +286,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>lī</td>
     </tr>
     <tr>
-        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="උ" onclick="onClick('vowel', 'u')" /></td>
-        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඌ" onclick="onClick('vowel', 'ū')" /></td>
-        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඍ" onclick="onClick('vowel', 'ru')" /></td>
-        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඎ" onclick="onClick('vowel', 'rū')" /></td>
+        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="උ" onclick="onClick('vowel', '3467')" /></td>
+        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඌ" onclick="onClick('vowel', '3468')" /></td>
+        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඍ" onclick="onClick('vowel', '3469')" /></td>
+        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඎ" onclick="onClick('vowel', '3470')" /></td>
         <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
         <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
     </tr>
@@ -302,17 +302,17 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>au</td>
     </tr>
     <tr>
-        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="එ" onclick="onClick('vowel', 'e')"/></td>
-        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඒ" onclick="onClick('vowel', 'ē')"/></td>
-        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඓ" onclick="onClick('vowel', 'ai')"/></td>
-        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඔ" onclick="onClick('vowel', 'o')"/></td>
-        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඕ" onclick="onClick('vowel', 'ō')"/></td>
-        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඖ" onclick="onClick('vowel', 'au')"/></td>
+        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="එ" onclick="onClick('vowel', '3473')"/></td>
+        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඒ" onclick="onClick('vowel', '3474')"/></td>
+        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඓ" onclick="onClick('vowel', '3475')"/></td>
+        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඔ" onclick="onClick('vowel', '3476')"/></td>
+        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඕ" onclick="onClick('vowel', '3477')"/></td>
+        <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඖ" onclick="onClick('vowel', '3478')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ං" /></td>
         <td><input class="btn btn-success" style="font-size:30px;width:80px" type="button" value="ඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			 
 			 
@@ -324,12 +324,12 @@ bflat.src = path+"/"+di+"/"+a+".wav";
 			  <div class="col-lg-6 text-left" id="welcomeDiv1"  style="display:none;">
 			 <table class="table table-bordered">
     <tr style='font-weight:bold;'>
-        <td>a</td>
-        <td>ā</td>
-        <td>æ</td>
-        <td>ǣ</td>
-        <td>i</td>
-        <td>ī</td>
+        <td>ka</td>
+        <td>kā</td>
+        <td>kæ</td>
+        <td>kǣ</td>
+        <td>ki</td>
+        <td>kī</td>
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px"  type="button" value="ක" onclick="onClick('vowel', 'ka')"/></td>
@@ -340,28 +340,28 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කී" onclick="onClick('vowel', 'kii')" /></td>
     </tr>
     <tr style='font-weight:bold;'>
-        <td>u</td>
-        <td>ū</td>
-        <td>ru</td>
-        <td>rū</td>
-        <td>li</td>
-        <td>lī</td>
+        <td>ku</td>
+        <td>kū</td>
+        <td>kru</td>
+        <td>krū</td>
+       <!-- <td>li</td>
+        <td>lī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කු" onclick="onClick('vowel', 'ku')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කූ" onclick="onClick('vowel', 'kuu')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කෘ" onclick="onClick('vowel', 'kru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කෲ" onclick="onClick('vowel', 'kau')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+        <!--<td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
-        <td>e</td>
-        <td>ē</td>
-        <td>ai</td>
-        <td>o</td>
-        <td>ō</td>
-        <td>au</td>
+        <td>ke</td>
+        <td>kē</td>
+        <td>kai</td>
+        <td>ko</td>
+        <td>kō</td>
+        <td>kau</td>
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කෙ" onclick="onClick('vowel', 'kea')"/></td>
@@ -371,10 +371,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කෝ" onclick="onClick('vowel', 'koo')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කෞ" onclick="onClick('vowel', 'krue')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>
@@ -386,12 +386,12 @@ bflat.src = path+"/"+di+"/"+a+".wav";
 			   <div class="col-lg-6 text-left" id="welcomeDiv2"  style="display:none;">
 			 <table class="table table-bordered">
     <tr style='font-weight:bold;'>
-        <td>a</td>
-        <td>ā</td>
-        <td>æ</td>
-        <td>ǣ</td>
-        <td>i</td>
-        <td>ī</td>
+        <td>kha</td>
+        <td>khā</td>
+        <td>khæ</td>
+        <td>khǣ</td>
+        <td>khi</td>
+        <td>khī</td>
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px"  type="button" value="ඛ" onclick="onClick('vowel', 'a')"/></td>
@@ -402,28 +402,28 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඛී" onclick="onClick('vowel', 'ī')" /></td>
     </tr>
     <tr style='font-weight:bold;'>
-        <td>u</td>
-        <td>ū</td>
-        <td>ru</td>
-        <td>rū</td>
-        <td>li</td>
-        <td>lī</td>
+        <td>khu</td>
+        <td>khū</td>
+        <td>khru</td>
+        <td>khrū</td>
+       <!-- <td>li</td>
+        <td>lī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඛු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඛූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඛෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඛෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+       <!-- <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
-        <td>e</td>
-        <td>ē</td>
-        <td>ai</td>
-        <td>o</td>
-        <td>ō</td>
-        <td>au</td>
+        <td>khe</td>
+        <td>khē</td>
+        <td>khai</td>
+        <td>kho</td>
+        <td>khō</td>
+        <td>khau</td>
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඛෙ" onclick="onClick('vowel', 'e')"/></td>
@@ -433,10 +433,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඛෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඛෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඛං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඛඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>
@@ -449,12 +449,12 @@ bflat.src = path+"/"+di+"/"+a+".wav";
 			      <div class="col-lg-6 text-left" id="welcomeDiv3"  style="display:none;">
 				<table class="table table-bordered">
     <tr style='font-weight:bold;'>
-        <td>a</td>
-        <td>ā</td>
-        <td>æ</td>
-        <td>ǣ</td>
-        <td>i</td>
-        <td>ī</td>
+        <td>ga</td>
+        <td>gā</td>
+        <td>gæ</td>
+        <td>gǣ</td>
+        <td>gi</td>
+        <td>gī</td>
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ග" onclick="onClick('vowel', 'a')"/></td>
@@ -465,28 +465,28 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ගී" onclick="onClick('vowel', 'ī')" /></td>
     </tr>
     <tr style='font-weight:bold;'>
-        <td>u</td>
-        <td>ū</td>
-        <td>ru</td>
-        <td>rū</td>
-        <td>li</td>
-        <td>lī</td>
+        <td>gu</td>
+        <td>gū</td>
+        <td>gru</td>
+        <td>grū</td>
+        <!--<td>li</td>
+        <td>lī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ගු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ගූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ගෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ගෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+        <!--<td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
-        <td>e</td>
-        <td>ē</td>
-        <td>ai</td>
-        <td>o</td>
-        <td>ō</td>
-        <td>au</td>
+        <td>ge</td>
+        <td>gē</td>
+        <td>gai</td>
+        <td>go</td>
+        <td>gō</td>
+        <td>gau</td>
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ගෙ" onclick="onClick('vowel', 'e')"/></td>
@@ -496,10 +496,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ගෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ගෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ගං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ගඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 				  </div>
 			   
@@ -1258,16 +1258,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>dhū</td>
         <td>dhru</td>
         <td>dhrū</td>
-        <td>dhli</td>
-        <td>dhlī</td>
+      <!--  <td>dhli</td>
+        <td>dhlī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඪු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඪූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඪෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඪෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+        <!--<td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>dhe</td>
@@ -1285,10 +1285,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඪෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඪෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඪං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඪඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>
@@ -1321,16 +1321,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>nū</td>
         <td>nru</td>
         <td>nrū</td>
-        <td>nli</td>
-        <td>nlī</td>
+        <!--<td>nli</td>
+        <td>nlī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ණු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ණූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ණෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ණෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+       <!-- <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>ne</td>
@@ -1348,10 +1348,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ණෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ණෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ණං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ණඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>
@@ -1383,16 +1383,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>ndū</td>
         <td>ndru</td>
         <td>ndrū</td>
-        <td>ndli</td>
-        <td>ndlī</td>
+       <!-- <td>ndli</td>
+        <td>ndlī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඬු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඬූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඬෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඬෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+        <!--<td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>nde</td>
@@ -1410,10 +1410,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඬෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඬෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඬං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඬඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>
@@ -1444,16 +1444,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>tū</td>
         <td>tru</td>
         <td>trū</td>
-        <td>tli</td>
-        <td>tlī</td>
+       <!-- <td>tli</td>
+        <td>tlī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="තු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="තූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="තෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="තෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+       <!-- <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>te</td>
@@ -1471,10 +1471,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="තෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="තෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="තං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="තඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>
@@ -1504,16 +1504,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>thū</td>
         <td>thru</td>
         <td>thrū</td>
-        <td>thli</td>
-        <td>thlī</td>
+       <!-- <td>thli</td>
+        <td>thlī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ථු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ථූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ථෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ථෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+       <!-- <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>the</td>
@@ -1531,10 +1531,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ථෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ථෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+    <!--<tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ථං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ථඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>
@@ -1565,16 +1565,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>dū</td>
         <td>dru</td>
         <td>drū</td>
-        <td>dli</td>
-        <td>dlī</td>
+      <!--  <td>dli</td>
+        <td>dlī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="දු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="දූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="දෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="දෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+      <!--  <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>de</td>
@@ -1592,10 +1592,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="දෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="දෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="දං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="දඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>			
@@ -1627,16 +1627,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>dhū</td>
         <td>dhru</td>
         <td>dhrū</td>
-        <td>dhli</td>
-        <td>dhlī</td>
+        <!--<td>dhli</td>
+        <td>dhlī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ධු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ධූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ධෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ධෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+       <!-- <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>dhe</td>
@@ -1654,10 +1654,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ධෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ධෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ධං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ධඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>	
@@ -1689,16 +1689,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>nū</td>
         <td>nru</td>
         <td>nrū</td>
-        <td>nli</td>
-        <td>nlī</td>
+       <!-- <td>nli</td>
+        <td>nlī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="නු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="නූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="නෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="නෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+        <!--<td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>ne</td>
@@ -1716,10 +1716,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="නෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="නෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="නං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="නඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>	
@@ -1752,16 +1752,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>ndū</td>
         <td>ndru</td>
         <td>ndrū</td>
-        <td>ndli</td>
-        <td>ndlī</td>
+       <!-- <td>ndli</td>
+        <td>ndlī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඳු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඳූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඳෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඳෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+       <!-- <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>nde</td>
@@ -1779,10 +1779,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඳෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඳෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඳං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඳඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>	
@@ -1815,16 +1815,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>pū</td>
         <td>pru</td>
         <td>prū</td>
-        <td>pli</td>
-        <td>plī</td>
+       <!-- <td>pli</td>
+        <td>plī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="පු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="පූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="පෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="පෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+        <!--<td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>pe</td>
@@ -1842,10 +1842,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="පෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="පෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="පං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="පඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>
@@ -1879,16 +1879,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>phū</td>
         <td>phru</td>
         <td>phrū</td>
-        <td>phli</td>
-        <td>phlī</td>
+       <!-- <td>phli</td>
+        <td>phlī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඵු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඵූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඵෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඵෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+        <!--<td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>phe</td>
@@ -1906,10 +1906,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඵෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඵෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඵං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඵඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>
@@ -1940,16 +1940,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>bū</td>
         <td>bru</td>
         <td>brū</td>
-        <td>bli</td>
-        <td>blī</td>
+       <!-- <td>bli</td>
+        <td>blī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="බු" onclick="onClick('vowel', 'bu')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="බූ" onclick="onClick('vowel', 'buu')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="බෘ" onclick="onClick('vowel', 'bru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="බෲ" onclick="onClick('vowel', 'bru')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+      <!--  <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>be</td>
@@ -1967,10 +1967,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="බෝ" onclick="onClick('vowel', 'bo')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="බෞ" onclick="onClick('vowel', 'bur')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="බං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="බඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>
@@ -2002,16 +2002,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>bhū</td>
         <td>bhru</td>
         <td>bhrū</td>
-        <td>bhli</td>
-        <td>bhlī</td>
+       <!-- <td>bhli</td>
+        <td>bhlī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="භු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="භූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="භෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="භෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+       <!-- <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>bhe</td>
@@ -2029,10 +2029,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="භෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="භෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="භං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="භඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>
@@ -2064,16 +2064,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>mū</td>
         <td>mru</td>
         <td>mrū</td>
-        <td>mli</td>
-        <td>mlī</td>
+        <!--<td>mli</td>
+        <td>mlī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="මු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="මූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="මෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="මෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+        <!--<td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>me</td>
@@ -2091,10 +2091,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="මෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="මෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+  <!--  <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="මං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="මඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>	
@@ -2126,16 +2126,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>mdū</td>
         <td>mdru</td>
         <td>mdrū</td>
-        <td>mdli</td>
-        <td>mdlī</td>
+       <!-- <td>mdli</td>
+        <td>mdlī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඹු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඹූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඹෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඹෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+       <!-- <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>mde</td>
@@ -2153,10 +2153,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඹෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඹෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඹං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඹඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>	
@@ -2188,16 +2188,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>yū</td>
         <td>yru</td>
         <td>yrū</td>
-        <td>yli</td>
-        <td>ylī</td>
+       <!-- <td>yli</td>
+        <td>ylī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="යු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="යූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="යෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="යෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+       <!-- <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>ye</td>
@@ -2215,10 +2215,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="යෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="යෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="යං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="යඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>	
@@ -2250,16 +2250,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>rū</td>
         <td>rru</td>
         <td>rrū</td>
-        <td>rli</td>
-        <td>rlī</td>
+       <!-- <td>rli</td>
+        <td>rlī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="රු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="රූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="රෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="රෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+       <!-- <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>re</td>
@@ -2277,10 +2277,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="රෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="රෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="රං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="රඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>	
@@ -2310,16 +2310,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>lū</td>
         <td>lru</td>
         <td>lrū</td>
-        <td>lli</td>
-        <td>llī</td>
+       <!-- <td>lli</td>
+        <td>llī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ලු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ලූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ලෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ලෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+       <!-- <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>le</td>
@@ -2337,10 +2337,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ලෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ලෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+  <!--  <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ලං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ලඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>
@@ -2370,16 +2370,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>vū</td>
         <td>vru</td>
         <td>vrū</td>
-        <td>vli</td>
-        <td>vlī</td>
+      <!--  <td>vli</td>
+        <td>vlī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="වු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="වූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="වෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="වෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+       <!-- <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>ve</td>
@@ -2397,10 +2397,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="වෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="වෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="වං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="වඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>
@@ -2432,16 +2432,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>sū</td>
         <td>sru</td>
         <td>srū</td>
-        <td>sli</td>
-        <td>slī</td>
+        <!--<td>sli</td>
+        <td>slī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ශු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ශූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ශෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ශෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+      <!--  <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>se</td>
@@ -2459,10 +2459,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ශෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ශෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ශං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ශඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>
@@ -2494,16 +2494,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>Sū</td>
         <td>Sru</td>
         <td>Srū</td>
-        <td>Sli</td>
-        <td>Slī</td>
+     <!--   <td>Sli</td>
+        <td>Slī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ෂු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ෂූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ෂෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ෂෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+        <!--<td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>Se</td>
@@ -2521,10 +2521,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ෂෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ෂෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ෂං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ෂඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>
@@ -2556,16 +2556,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>Sū</td>
         <td>Sru</td>
         <td>Srū</td>
-        <td>Sli</td>
-        <td>Slī</td>
+       <!-- <td>Sli</td>
+        <td>Slī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="සු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="සූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="සෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="සෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+       <!-- <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>Se</td>
@@ -2583,10 +2583,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="සෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="සෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="සං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="සඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>
@@ -2617,16 +2617,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>hū</td>
         <td>hru</td>
         <td>hrū</td>
-        <td>hli</td>
-        <td>hlī</td>
+      <!--  <td>hli</td>
+        <td>hlī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="හු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="හූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="හෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="හෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+      <!--  <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>he</td>
@@ -2644,9 +2644,9 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="හෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="හෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+   <!-- <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="හං" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="හඃ" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="හඃ" /></td>-->
     </tr>
 </table>
 			  
@@ -2677,16 +2677,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>lū</td>
         <td>lru</td>
         <td>lrū</td>
-        <td>lli</td>
-        <td>llī</td>
+        <!--<td>lli</td>
+        <td>llī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ළු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ළූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ළෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ළෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+      <!--  <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>le</td>
@@ -2704,10 +2704,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ළෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ළෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+  <!--  <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ළං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ළඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>  
@@ -2735,16 +2735,16 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>faū</td>
         <td>faru</td>
         <td>farū</td>
-        <td>fali</td>
-        <td>falī</td>
+       <!-- <td>fali</td>
+        <td>falī</td>-->
     </tr>
     <tr>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ෆු" onclick="onClick('vowel', 'u')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ෆූ" onclick="onClick('vowel', 'ū')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ෆෘ" onclick="onClick('vowel', 'ru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ෆෲ" onclick="onClick('vowel', 'rū')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>
+      <!--  <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඐ" onclick="onClick('vowel', 'lī')" /></td>-->
     </tr>
     <tr style='font-weight:bold;'>
         <td>fae</td>
@@ -2762,10 +2762,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ෆෝ" onclick="onClick('vowel', 'ō')"/></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ෆෞ" onclick="onClick('vowel', 'au')"/></td>
     </tr>
-    <tr style="margin-top:50px;">
+  <!--  <tr style="margin-top:50px;">
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ෆං" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ෆඃ" /></td>
-    </tr>
+    </tr>-->
 </table>
 			  
 			  </div>     

@@ -59,7 +59,7 @@
                         <a href="manage_words.php">Manage Words</a>
                     </li>
 		     <li>
-                        <a href="drag.php">Drag Game</a>
+                        <a href="drag.php">Game</a>
                     </li>			
 					
                 </ul>
