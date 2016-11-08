@@ -41,7 +41,7 @@ if(isset($_FILES['fileup']) && strlen($_FILES['fileup']['name']) > 1) {
       
 $servername = "localhost:3306";
 $username = "root";
-$password = "sA456";
+$password = "";
 $dbname = "lire";
 
 // Create connection

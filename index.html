@@ -67,7 +67,7 @@
                         <a class="page-scroll" href="recording.html">Record</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#learn">Learn</a>
+                        <a class="page-scroll" href="learningaid.php">Learn</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#api">API</a>
@@ -326,30 +326,32 @@
         <h4 class="modal-title">Register with Lire</h4>
       </div>
       <div class="modal-body">
+          <div class="form-group">
         <div class="row">
-            <div class="col-md-3">
-                <label for="txtRegUsername">Email:</label>
+                <div class="col-md-4">
+                    <label for="txtRegUsername">Email:</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" id="txtRegUsername">
+                </div>
             </div>
-            <div class="col-md-3">
-                <input type="text" id="txtRegUsername">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="txtRegPassword">Password:</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" id="txtRegPassword">
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <label for="txtRegPassword">Password:</label>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="txtRegPassword2">Re type Password:</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" id="txtRegPassword2">
+                </div>
             </div>
-            <div class="col-md-3">
-                <input type="text" id="txtRegPassword">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <label for="txtRegPassword">Re type Password:</label>
-            </div>
-            <div class="col-md-3">
-                <input type="text" id="txtRegPassword">
-            </div>
-        </div>
+          </div>
       </div>
       <div class="modal-footer">
         <button id="btnRegister" type="button" class="btn btn-default" data-dismiss="modal">Register</button>

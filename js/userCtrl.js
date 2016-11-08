@@ -54,3 +54,7 @@ function logout(){
                 alert("Logout failing, please try again");
           });
 }
+
+function register(){
+    var uname = $('#txtRegUsername').val();
+}

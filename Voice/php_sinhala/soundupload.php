@@ -41,7 +41,7 @@ if(isset($_FILES['fileup']) && strlen($_FILES['fileup']['name']) > 1) {
       
 $servername = "localhost:3306";
 $username = "root";
-$password = "sA456";
+$password = "";
 $dbname = "lire";
 
 // Create connection
@@ -101,7 +101,7 @@ sendPostData($url, $data);
 } else {
     echo "0 results";
 } 
-      
+mysqli_close($conn);
 	  
       echo '<br/>File type: <b>'. $_FILES['fileup']['type'] .'</b>';
       echo '<br />Size: <b>'. number_format($_FILES['fileup']['size']/1024, 3, '.', '') .'</b> KB';
@@ -115,7 +115,7 @@ sendPostData($url, $data);
   }
   //else echo $err;
 }
-mysqli_close($conn);
+
 
 ?> 
 

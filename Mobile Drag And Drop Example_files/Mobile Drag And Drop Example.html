@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)https://www.stevefenton.co.uk/cmsfiles/assets/file/mobiledragdrop.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<link rel="stylesheet" type="text/css" href="./Mobile Drag And Drop Example_files/optional.css">
+<style type="text/css">.drag,.drag2{float:left;width:21%;background-color:Green;color:White;margin:10px 2%;cursor:move;text-align:center;-moz-border-radius:1em;-webkit-border-radius:1em;border-radius:1em;}.selected{background-color:Yellow;color:Black;}.drop{background-color:Blue;color:White;margin:3px;padding:10px;-moz-border-radius:1em;-webkit-border-radius:1em;border-radius:1em;}.active{background-color:orange;cursor:crosshair;}</style>
+</head>
+<body>
+
+<div id="maincontent">
+
+<div id="how">
+<div class="drop mobiledraganddrop1drop" id="drop1">
+<div style="clear: both;"><p>You can drop items here.</p></div>
+</div>
+<div class="drop mobiledraganddrop1drop mobiledraganddrop2drop" id="drop2"><div class="drag mobiledraganddrop1drag" id="drag2">
+<p>Drag 2</p>
+</div><div class="drag mobiledraganddrop1drag" id="drag1">
+<p>Drag 1</p>
+</div>
+<div style="clear: both;"><p>You can drop items here too.</p></div>
+</div>
+
+
+<div class="drag mobiledraganddrop1drag" id="drag3">
+<p>Drag 3</p>
+</div>
+<div class="drag2 mobiledraganddrop2drag" id="drag4">
+<p>Drag 4*</p>
+</div>
+<div style="clear: both">&nbsp;</div>
+</div>
+
+</div>
+<script type="text/javascript" src="./Mobile Drag And Drop Example_files/jquery.min.js"></script>
+<script type="text/javascript" src="./Mobile Drag And Drop Example_files/jquery.mobiledragdrop.js"></script>
+<script type="text/javascript">
+		$(document).ready(function() {
+			$(".drag").mobiledraganddrop({ targets: ".drop", status: "#status"});
+			$(".drag2").mobiledraganddrop({ targets: "#drop2", status: "#status"});
+		});
+	</script>
+
+</body></html>
