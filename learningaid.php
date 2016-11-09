@@ -66,7 +66,7 @@
 		<div class="col-lg-6 text-left">
               <!-- Page Content start -->
 		
-	<legend>Amin Login</legend>
+	<legend>Admin Login</legend>
 						<form action="" method="POST">
 						<div class="form-group">
 						<label>User Name</label>

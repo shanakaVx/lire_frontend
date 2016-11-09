@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Online Word Game</title>
+    <title>Word Game</title>
 <link rel="stylesheet" href="../../dist/leaflet.css" />
 
 	<link rel="stylesheet" href="../../../dist/leaflet.css" />
@@ -96,9 +96,10 @@ margin:10px 2%;
 					 <li>
                         <a href="manage_words.php">Manage Words</a>
                     </li>
-		 <li>
-                        <a href="drag.php">Drag Game</a>
-                    </li>			
+					<li>
+                        <a href="drag.php">Game</a>
+                    </li>
+					
                    
                 </ul>
             </div>
@@ -173,6 +174,9 @@ function submitform(xxx)
 <div style="clear: both;"><p>You can drop Characters here.</p></div>
 </div>
 
+<audio id="sound1" src="tha.wav"></audio>
+<audio id="sound2" src="ru.wav"></audio>
+<audio id="sound3" src="va.wav"></audio>
 	
 
 
@@ -185,20 +189,18 @@ function submitform(xxx)
         <td><input class="drag mobiledraganddrop1drag" id="drag1" style="font-size:30px;width:80px;background-color:black" type="button" value="උ" onclick="submitform('U'); return false;"/></td>
         <td><input class="drag mobiledraganddrop1drag" id="drag2" style="font-size:30px;width:80px;background-color:black" type="button" value="එ" onclick="submitform('E'); return false;"/></td>
         <td><input class="drag mobiledraganddrop1drag" id="drag3" style="font-size:30px;width:80px;background-color:black" type="button" value="ඔ" onclick="submitform('O'); return false;"/></td>
-		<!--td>
-        <td><input class="drag mobiledraganddrop1drag" id="drag4" style="font-size:30px;width:80px;background-color:black" type="button" value="ඊ" onclick="submitform('RR'); return false;"/></td><td-->
+        <td><input class="drag mobiledraganddrop1drag" id="drag4" style="font-size:30px;width:80px;background-color:black" type="button" value="ඊ" onclick="submitform('RR'); return false;"/></td>
         <td><input class="drag mobiledraganddrop1drag" id="drag5" style="font-size:30px;width:80px;background-color:black" type="button" value="ත" onclick="submitform('T'); return false;"/></td>
          <td><input class="drag mobiledraganddrop1drag" id="drag6" style="font-size:30px;width:80px;background-color:black" type="button" value="රු" onclick="submitform('RU'); return false;"/></td>
         
 		 <td><input class="drag mobiledraganddrop1drag" id="drag7" style="font-size:30px;width:80px;background-color:black" type="button" value="ල" onclick="submitform('LA'); return false;"/></td>
-        <!--td>
-		 <td><input class="drag mobiledraganddrop1drag" id="drag8" style="font-size:30px;width:80px;background-color:black" type="button" value="රේ" onclick="submitform('RE'); return false;"/></td><td-->
+        
+		 <td><input class="drag mobiledraganddrop1drag" id="drag8" style="font-size:30px;width:80px;background-color:black" type="button" value="රේ" onclick="submitform('RE'); return false;"/></td>
         
 		 <td><input class="drag mobiledraganddrop1drag" id="drag9" style="font-size:30px;width:80px;background-color:black" type="button" value="ව" onclick="submitform('VA'); return false;"/></td>
-        <!--td>
+        
 		 <td><input class="drag mobiledraganddrop1drag" id="drag10" style="font-size:30px;width:80px;background-color:black" type="button" value="රැ" onclick="submitform('RUU'); return false;"/></td>
-		
-         <td><input class="drag mobiledraganddrop1drag" id="drag11" style="font-size:30px;width:80px;background-color:black" type="button" value="ග" onclick="submitform('WE'); return false;"/></td><td-->
+         <td><input class="drag mobiledraganddrop1drag" id="drag11" style="font-size:30px;width:80px;background-color:black" type="button" value="වෙ" onclick="submitform('WE'); return false;"/></td>
         
 		
     </tr>
@@ -220,6 +222,7 @@ function submitform(xxx)
 		  <form action="" method="POST">
 		  <input type="submit" value="Submit Your Answer" name="btnnext" class="btn btn-primary"/>
 		  
+		  <a href="drag1.php" class="btn btn-danger">Next Question >></a>
 		  </form>
 		  <?php
 			
@@ -236,7 +239,24 @@ function submitform(xxx)
 		
 		
 		
-		echo "<script>var snd1 = new Audio('tharuwa.wma');";
+		/*echo "<script> var audio1 = document.getElementById('sound1');
+var audio2 = document.getElementById('sound2');
+var audio3 = document.getElementById('sound3');
+
+ audio1.play();
+ audio2.play();
+  audio3.play();
+
+";
+
+echo "alert('Hello!.. Your Answer Is Correct');</script>";
+		
+	
+		
+		}else{
+		
+		echo "<script> alert('Hello!.. Your Answer Is Wrong..Please Try Again!!');</script>";*/
+		echo "<script>var snd1 = new Audio('tharuwa.wav');";
 
 echo "snd1.play(); alert('Hello!.. Your Answer Is Correct');</script>";
 		
@@ -244,12 +264,13 @@ echo "snd1.play(); alert('Hello!.. Your Answer Is Correct');</script>";
 	//header('Location:drag1.php');
 	//header("refresh:2;url=drag1.php); 
 //echo 'this is a test';
-//exit;
-//return 0;
+exit;
+return 0;
 		
 		}else{
 		
 		echo "<script> alert('Hello!.. Your Answer Is Wrong..Please Try Again!!');</script>";
+		
 		
 		
 		}

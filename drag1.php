@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Online Word Game</title>
+    <title>Word Game</title>
 <link rel="stylesheet" href="../../dist/leaflet.css" />
 
 	<link rel="stylesheet" href="../../../dist/leaflet.css" />
@@ -78,7 +78,7 @@ margin:10px 2%;
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Sinhala Keyboard</a>
+                <a class="navbar-brand" href="#">Sinhala Speech Therapy Application</a>
            
 
 		   </div>
@@ -96,9 +96,10 @@ margin:10px 2%;
 					 <li>
                         <a href="manage_words.php">Manage Words</a>
                     </li>
-		 <li>
-                        <a href="drag.php">Drag Game</a>
-                    </li>			
+					<li>
+                        <a href="drag.php">Game</a>
+                    </li>
+					
                    
                 </ul>
             </div>
@@ -137,10 +138,10 @@ function submitform(xxx)
        }
       
 	    
-	  if(xxx=='GA' || xxx=='SA' || xxx=='LAA' || xxx=='A' || xxx=='U' || xxx=='E' || xxx=='OR' || xxx=='LA'){
+	  if(xxx=='MA' || xxx=='LA' || xxx=='VA' || xxx=='A' || xxx=='U' || xxx=='E' || xxx=='OR' || xxx=='LA'){
 	   
 	   //alert('ok');
-	   xmlhttp.open("POST", "test1.php?cha="+xxx);
+	   xmlhttp.open("POST", "test.php?cha="+xxx);
        xmlhttp.send(formdata);
 	   
 
@@ -168,10 +169,13 @@ function submitform(xxx)
         <div class="row">
 	
 <form name="foo" action="" method="POST" id="foo">
-<img src="images/star.jpg"/>
+<img src="images/flower.jpg" width="30%"/>
 <div class="drop mobiledraganddrop1drop mobiledraganddrop2drop" onclick="refresh();"   id="drop2">
 <div style="clear: both;"><p>You can drop Characters here.</p></div>
 </div>
+
+<audio id="sound1" src="ma.mp3"></audio>
+<audio id="sound2" src="la.mp3"></audio>
 
 	
 
@@ -181,12 +185,12 @@ function submitform(xxx)
 			 <table  class="table table-bordered">
   
     <tr>
-        <td><input class="drag mobiledraganddrop1drag" id="drag" style="font-size:30px;width:80px;background-color:black" type="button" value="අ" onclick="submitform('A'); return false;"/></td>
+        <td><input class="drag mobiledraganddrop1drag" id="drag" style="font-size:30px;width:80px;background-color:black" type="button" value="ම" onclick="submitform('MA'); return false;"/></td>
         <td><input class="drag mobiledraganddrop1drag" id="drag1" style="font-size:30px;width:80px;background-color:black" type="button" value="උ" onclick="submitform('U'); return false;"/></td>
         <td><input class="drag mobiledraganddrop1drag" id="drag2" style="font-size:30px;width:80px;background-color:black" type="button" value="එ" onclick="submitform('E'); return false;"/></td>
         <td><input class="drag mobiledraganddrop1drag" id="drag3" style="font-size:30px;width:80px;background-color:black" type="button" value="ඔ" onclick="submitform('O'); return false;"/></td>
         <td><input class="drag mobiledraganddrop1drag" id="drag4" style="font-size:30px;width:80px;background-color:black" type="button" value="ඊ" onclick="submitform('RR'); return false;"/></td>
-        <td><input class="drag mobiledraganddrop1drag" id="drag5" style="font-size:30px;width:80px;background-color:black" type="button" value="ග" onclick="submitform('G'); return false;"/></td>
+        <td><input class="drag mobiledraganddrop1drag" id="drag5" style="font-size:30px;width:80px;background-color:black" type="button" value="ත" onclick="submitform('T'); return false;"/></td>
          <td><input class="drag mobiledraganddrop1drag" id="drag6" style="font-size:30px;width:80px;background-color:black" type="button" value="රු" onclick="submitform('RU'); return false;"/></td>
         
 		 <td><input class="drag mobiledraganddrop1drag" id="drag7" style="font-size:30px;width:80px;background-color:black" type="button" value="ල" onclick="submitform('LA'); return false;"/></td>
@@ -218,6 +222,7 @@ function submitform(xxx)
 		  <form action="" method="POST">
 		  <input type="submit" value="Submit Your Answer" name="btnnext" class="btn btn-primary"/>
 		  
+		  <a href="drag2.php" class="btn btn-danger">Next Question >></a>
 		  </form>
 		  <?php
 			
@@ -226,23 +231,47 @@ function submitform(xxx)
 					
 					mysql_select_db("sinhala") or die(mysql_error());
 					
-					$result1 = mysql_query("SELECT * FROM game")
+					$result1 = mysql_query("SELECT * FROM game WHERE id='"."2"."'")
 					or die(mysql_error()); 
 					
-		while($row2 = mysql_fetch_array($result1)){
-		if($row2['w1']=='G' && $row1['w2']=='S' && $row1['w3']=='NULL'){
+		while($row1 = mysql_fetch_array($result1)){
+		if($row1['w1']=='MA' && $row1['w2']=='LA'){
 		
 		
 		
-		echo "<script>var snd1 = new Audio('gasa.mp3');";
+		/*echo "<script> var audio1 = document.getElementById('sound1');
+var audio2 = document.getElementById('sound2');
+
+
+ audio1.play();
+  audio2.play();
+  
+
+";
+
+echo "alert('Hello!.. Your Answer Is Correct');</script>";
+		
+	
+		
+		}else{
+		
+		echo "<script> alert('Hello!.. Your Answer Is Wrong..Please Try Again!!');</script>";*/
+				echo "<script>var snd1 = new Audio('mala.wav');";
 
 echo "snd1.play(); alert('Hello!.. Your Answer Is Correct');</script>";
 		
-	//header('Location=drag1.php');
+		//header( "refresh:5;url=wherever.php" );
+	//header('Location:drag1.php');
+	//header("refresh:2;url=drag1.php); 
+//echo 'this is a test';
+exit;
+return 0;
 		
 		}else{
 		
 		echo "<script> alert('Hello!.. Your Answer Is Wrong..Please Try Again!!');</script>";
+		
+		
 		
 		
 		}
