@@ -25,6 +25,13 @@ $('#pause').click(function () {
     $('#audio').get(0).pause();
 });
 
+
+$('#selVoice').change(function(){
+    uid = $("#selVoice option:selected").attr("data-id");
+    //$(this).append("<option data-id='55'>Kum</option>");
+});
+
+
 //remove button
 $('#playlist').on("click", "button", function () {
     $(this).parent().remove();

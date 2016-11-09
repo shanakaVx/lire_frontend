@@ -16,7 +16,7 @@ $(document).ready(function(){
 
         slidert = $("#timingSlider").bootstrapSlider({
         ticks: [1, 2, 3],
-        ticks_labels: ['Short', 'Normal', 'Long'],
+        ticks_labels: ['Long', 'Normal', 'Short'],
         min : 1,
         max: 3
     });

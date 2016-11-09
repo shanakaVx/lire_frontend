@@ -9,7 +9,7 @@ var tlink = "";
 var tname = "";
 var vmods = "";
 var consonants = "";
-var userId = 1;
+//var uid = uid;
 var vowels = "";
 var lettersObj = "";
 
@@ -26,7 +26,7 @@ $(document).ready(function(){
             cancel: false,
             revert: true,
             start: function () {
-                tlink = "voiceprofiles/"+userId+"/0"+userId+"-"+$(this).attr('data-fname');
+                tlink = "voiceprofiles/1/0"+uid+"-"+$(this).attr('data-fname');
                 tname = $(this).attr('value');
                 //console.log($(this));
             }
@@ -52,7 +52,7 @@ $(document).ready(function(){
 
 function onClick(type, prefix) {
     var player = audio[0];
-    var file = "voiceprofiles/"+userId+"/0"+userId+"-"+prefix+".wav";
+    var file = "voiceprofiles/1/0"+uid+"-"+prefix+".wav";
     var appendhtml = "";
 
     $('#audio').attr('src', file).trigger("play");
@@ -74,7 +74,7 @@ function onClick(type, prefix) {
             cancel: false,
             revert: true,
             start: function () {
-                tlink = "voiceprofiles/"+userId+"/0"+userId+"-"+$(this).attr('data-fname');
+                tlink = "voiceprofiles/1/0"+uid+"-"+$(this).attr('data-fname');
                 tname = $(this).attr('value');
                 //console.log($(this));
             }
@@ -143,7 +143,7 @@ function fillVowels(letter, prefix){
             cancel: false,
             revert: true,
             start: function () {
-                tlink = "voiceprofiles/"+userId+"/0"+userId+"-"+$(this).attr('data-fname');
+                tlink = "voiceprofiles/1/0"+uid+"-"+$(this).attr('data-fname');
                 tname = $(this).attr('value');
                 //console.log($(this));
             }
@@ -219,7 +219,7 @@ function fillPureVowels(language){
             cancel: false,
             revert: true,
             start: function () {
-                tlink = "voiceprofiles/"+userId+"/0"+userId+"-"+$(this).attr('data-fname');
+                tlink = "voiceprofiles/1/0"+uid+"-"+$(this).attr('data-fname');
                 tname = $(this).attr('value');
                 //console.log($(this));
             }

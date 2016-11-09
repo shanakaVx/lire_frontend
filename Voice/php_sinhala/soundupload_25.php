@@ -51,7 +51,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT uid, appKey FROM users";
+$sql = "SELECT uid, appKey FROM currentuser";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -68,7 +68,7 @@ if (mysqli_num_rows($result) > 0) {
      $namefile=$_FILES['fileup']['name'];    
      $url = "http://localhost:8080/recording/record";
      
-     $data = array('uid'=>(string)$row["uid"],'folder'=>'25','fname'=>(string)$namefile,'appk'=>(string)$row["appKey"]);
+     $data = array('uid'=>'0'.(string)$row["uid"],'folder'=>'25','fname'=>(string)$namefile,'appk'=>(string)$row["appKey"]);
    //echo "ud: " . $row["uid"]. " - Name: " . $row["appKey"]. "<br>";
      
     function sendPostData($url,$data){

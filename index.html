@@ -115,6 +115,17 @@
                 <p>Click and play the letters, or drag and drop on to the SpeechTimeline to read</p>
             </div>
         </div>
+        <div class="row" style="text-align: left; font-size: 18px;">
+            <div class="col-md-1">
+                Voices
+            </div>
+            <div class="col-md-5">
+                <select class="selectpicker show-menu-arrow" data-style="btn-info" id="selVoice">
+                    <option data-id="1">Mika-Sinhala-default</option>
+                </select>
+            </div>
+            <p></p>
+        </div>
         <div class="row">
             <div id="container">
                 <div id="content">
@@ -124,7 +135,7 @@
                 <div id="vowels">
                     <div id='language'>
                         <a id="btnVowelsSi" class="btn btn-default btn-lg">Sinhala vowels</a>
-                        <select id="lang">
+                        <select id="lang" style="display: none;">
                             <option name="si">Sinhala</option>
                             <option name="ta">Tamil</option>
                         </select>
@@ -145,7 +156,7 @@
         <div class="row">
 
             <ul id="playlist" class="timeline" draggable="true">
-                <li class="entry">
+                <!--<li class="entry">
                     <button id="delete" class="delete">X</button><br>
                     <a data="voiceprofiles/1/01-3482-3536.wav" data-pitch="N" data-time="L">
                         a
@@ -162,7 +173,7 @@
                     <a data="voiceprofiles/1/01-3482-3542.wav" data-pitch="L" data-time="N">
                         a
                     </a>
-                </li>
+                </li> -->
 
             </ul>
 
@@ -239,12 +250,18 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <h2>Buy an API plan</h2>
                         <p>select the plan most suitable to your need</p>
-                        <a id="btnTokenizer" class="btn btn-default btn-lg">Read!</a>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        
+                    <div class="col-md-4 pre">
+                        <a id="btnPre" class="btn btn-default btn-lg">Buy!</a>
+                    </div>
+                    
+                    <div class="col-md-4 dev">
+                        <a id="btnDev" class="btn btn-warning btn-lg">Buy!</a>
+                    </div>
+                    <div class="col-md-4 trial">
+                        <a id="btnTrial" class="btn btn-default btn-lg">Buy!</a>
                     </div>
                 </div>
             </div>
@@ -334,13 +351,21 @@
                 <div class="col-md-4">
                     <input type="text" id="txtRegUsername">
                 </div>
-            </div>
+        </div>
+        <div class="row">
+                <div class="col-md-4">
+                    <label for="txtRegName">Name:</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" id="txtRegName">
+                </div>
+        </div>
             <div class="row">
                 <div class="col-md-4">
                     <label for="txtRegPassword">Password:</label>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" id="txtRegPassword">
+                    <input type="password" id="txtRegPassword">
                 </div>
             </div>
             <div class="row">
@@ -348,7 +373,7 @@
                     <label for="txtRegPassword2">Re type Password:</label>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" id="txtRegPassword2">
+                    <input type="password" id="txtRegPassword2">
                 </div>
             </div>
           </div>
@@ -412,8 +437,8 @@
     <script src="js/grayscale.js"></script>
 
     <!-- Control JavaScript -->
-    <script src="js/dashboard.js"></script>
     <script src="js/timeline.js"></script>
+    <script src="js/dashboard.js"></script>
     <script src="js/index.js"></script>
     <script src="js/userCtrl.js"></script>
 </body>

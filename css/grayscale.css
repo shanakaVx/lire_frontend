@@ -272,6 +272,27 @@ a:focus {
     -o-background-size: cover; 
 }
 
+.pre{
+    height: 435px;
+    color: white;
+    background: url(../img/premium.jpg) no-repeat center center scroll;
+    background-repeat: no-repeat, no-repeat; 
+}
+
+.dev{
+    height: 435px;
+    color: white;
+    background: url(../img/dev.jpg) no-repeat center center scroll;
+    background-repeat: no-repeat, no-repeat; 
+}
+
+.trial{
+    height: 435px;
+    color: white;
+    background: url(../img/trial.jpg) no-repeat center center scroll;
+    background-repeat: no-repeat, no-repeat; 
+}
+
 #map {
     width: 100%;
     height: 200px;
