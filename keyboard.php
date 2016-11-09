@@ -102,6 +102,9 @@ path="voice/sounds_child";
 }
 else if(pa=='2'){
 path="voice/sounds1";
+}
+else if(pa=='3'){
+path="voice/sounds";
 
 }
 bflat.src = path+"/"+di+"/"+a+".wav";
@@ -146,8 +149,8 @@ bflat.src = path+"/"+di+"/"+a+".wav";
                     <td><input  class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඛ" onclick="onClick('consonent', '3483');showDiv2()"/></td>
                     <td><input  class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ග" onclick="onClick('consonent', '3484');showDiv3()"/></td>
                     <td><input  class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඝ" onclick="onClick('consonent', '3485');showDiv4()"/></td>
-                    <td><input  class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඞ" onclick="onClick('consonent', 'nga');showDiv5()"/></td>
-                    <td><input  class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඟ" onclick="onClick('consonent', '01-3487');showDiv6()"/></td>
+                    <td><input  class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඞ" onclick="onClick('consonent', '3486');showDiv5()"/></td>
+                    <td><input  class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඟ" onclick="onClick('consonent', '3487');showDiv6()"/></td>
                 </tr>
                  <tr style='font-weight:bold;'>
                     <td>ca</td>
@@ -158,12 +161,12 @@ bflat.src = path+"/"+di+"/"+a+".wav";
                     <td>ñja</td>
                 </tr>
                 <tr>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ච" onclick="onClick('consonent', '01-3488');showDiv7()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඡ" onclick="onClick('consonent', '01-3489');showDiv8()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ජ" onclick="onClick('consonent', '01-3490');showDiv9()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඣ" onclick="onClick('consonent', '01-3491');showDiv10()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඤ" onclick="onClick('consonent', '01-3492');showDiv11()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඦ" onclick="onClick('consonent', '01-3494');showDiv12()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ච" onclick="onClick('consonent', '3488');showDiv7()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඡ" onclick="onClick('consonent', '3489');showDiv8()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ජ" onclick="onClick('consonent', '3490');showDiv9()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඣ" onclick="onClick('consonent', '3491');showDiv10()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඤ" onclick="onClick('consonent', '3492');showDiv11()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඦ" onclick="onClick('consonent', '3493');showDiv12()"/></td>
                 </tr>
                 <tr style='font-weight:bold;'>
                     <td>Ṭa</td>
@@ -174,12 +177,12 @@ bflat.src = path+"/"+di+"/"+a+".wav";
                     <td>ṆḌa</td>
                 </tr>
                 <tr>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ට" onclick="onClick('consonent', '01-3495');showDiv13()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඨ" onclick="onClick('consonent', '01-3496');showDiv1()14"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඩ" onclick="onClick('consonent', '01-3497');showDiv15()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඪ" onclick="onClick('consonent', '01-3498');showDiv16()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ණ" onclick="onClick('consonent', '01-3499');showDiv17()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඬ" onclick="onClick('consonent', '01-3500');showDiv18()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ට" onclick="onClick('consonent', '3495');showDiv13()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඨ" onclick="onClick('consonent', '3496');showDiv1()14"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඩ" onclick="onClick('consonent', '3497');showDiv15()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඪ" onclick="onClick('consonent', '3498');showDiv16()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ණ" onclick="onClick('consonent', '3499');showDiv17()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඬ" onclick="onClick('consonent', '3500');showDiv18()"/></td>
                 </tr>
                   <tr style='font-weight:bold;'>
                     <td>ta</td>
@@ -190,12 +193,12 @@ bflat.src = path+"/"+di+"/"+a+".wav";
                     <td>nda</td>
                 </tr>
                 <tr>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ත" onclick="onClick('consonent', '01-3501');showDiv19()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ථ" onclick="onClick('consonent', '01-3502');showDiv20()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ද" onclick="onClick('consonent', '01-3503');showDiv21()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ධ" onclick="onClick('consonent', '01-3504');showDiv22()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="න" onclick="onClick('consonent', '01-3505');showDiv23()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඳ" onclick="onClick('consonent', '01-3507');showDiv24()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ත" onclick="onClick('consonent', '3501');showDiv19()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ථ" onclick="onClick('consonent', '3502');showDiv20()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ද" onclick="onClick('consonent', '3503');showDiv21()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ධ" onclick="onClick('consonent', '3504');showDiv22()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="න" onclick="onClick('consonent', '3505');showDiv23()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඳ" onclick="onClick('consonent', '3507');showDiv24()"/></td>
                 </tr>
                    <tr style='font-weight:bold;'>
                     <td>pa</td>
@@ -206,12 +209,12 @@ bflat.src = path+"/"+di+"/"+a+".wav";
                     <td>mda</td>
                 </tr>
                 <tr>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ප" onclick="onClick('consonent', '01-3508');showDiv25()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඵ" onclick="onClick('consonent', '01-3509');showDiv26()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="බ" onclick="onClick('consonent', '01-3510');showDiv27()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px"type="button" value="භ" onclick="onClick('consonent', '01-3511');showDiv28()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ම" onclick="onClick('consonent', '01-3512');showDiv29()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඹ" onclick="onClick('consonent', '01-3513');showDiv30()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ප" onclick="onClick('consonent', '3508');showDiv25()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඵ" onclick="onClick('consonent', '3509');showDiv26()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="බ" onclick="onClick('consonent', '3510');showDiv27()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px"type="button" value="භ" onclick="onClick('consonent', '3511');showDiv28()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ම" onclick="onClick('consonent', '3512');showDiv29()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ඹ" onclick="onClick('consonent', '3513');showDiv30()"/></td>
                 </tr>
                   <tr style='font-weight:bold;'>
                     <td>ya</td>
@@ -222,10 +225,10 @@ bflat.src = path+"/"+di+"/"+a+".wav";
                     <td></td>
                 </tr>
                 <tr>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ය" onclick="onClick('consonent', '01-3514');showDiv31()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ර" onclick="onClick('consonent', '01-3515');showDiv32()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ල" onclick="onClick('consonent', '01-3517');showDiv33()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ව" onclick="onClick('consonent', '01-3520');showDiv34()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ය" onclick="onClick('consonent', '3514');showDiv31()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ර" onclick="onClick('consonent', '3515');showDiv32()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ල" onclick="onClick('consonent', '3517');showDiv33()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ව" onclick="onClick('consonent', '3520');showDiv34()"/></td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -238,12 +241,12 @@ bflat.src = path+"/"+di+"/"+a+".wav";
                     <td>fa</td>
                 </tr>
                 <tr>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ශ" onclick="onClick('consonent', '01-3521');showDiv35()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ෂ" onclick="onClick('consonent', '01-3522');showDiv36()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ස" onclick="onClick('consonent', '01-3523');showDiv37()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="හ" onclick="onClick('consonent', '01-3524');showDiv38()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ළ" onclick="onClick('consonent', '01-3525');showDiv39()"/></td>
-                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ෆ" onclick="onClick('consonent', '01-3526')showDiv40()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ශ" onclick="onClick('consonent', '3521');showDiv35()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ෂ" onclick="onClick('consonent', '3522');showDiv36()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ස" onclick="onClick('consonent', '3523');showDiv37()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="හ" onclick="onClick('consonent', '3524');showDiv38()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ළ" onclick="onClick('consonent', '3525');showDiv39()"/></td>
+                    <td><input class="btn btn-primary" style="font-size:30px;width:80px" type="button" value="ෆ" onclick="onClick('consonent', '3526')showDiv40()"/></td>
                 </tr>
             </table>
 			  
@@ -332,12 +335,12 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>kī</td>
     </tr>
     <tr>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px"  type="button" value="ක" onclick="onClick('vowel', 'ka')"/></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කා" onclick="onClick('vowel', 'ka')"/></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කැ" onclick="onClick('vowel', 'ke')"/></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කෑ" onclick="onClick('vowel', 'kee')"/></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කි" onclick="onClick('vowel', 'ki')"/></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කී" onclick="onClick('vowel', 'kii')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px"  type="button" value="3482" onclick="onClick('consonent', 'ka')"/></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කා" onclick="onClick('vowel', '3482-3535')"/></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කැ" onclick="onClick('vowel', '3482-3536')"/></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කෑ" onclick="onClick('vowel', '3482-3537')"/></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කි" onclick="onClick('vowel', '3482-3538')"/></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කී" onclick="onClick('vowel', '3482-3539')" /></td>
     </tr>
     <tr style='font-weight:bold;'>
         <td>ku</td>
@@ -348,8 +351,8 @@ bflat.src = path+"/"+di+"/"+a+".wav";
         <td>lī</td>-->
     </tr>
     <tr>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කු" onclick="onClick('vowel', 'ku')" /></td>
-        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කූ" onclick="onClick('vowel', 'kuu')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කු" onclick="onClick('vowel', '3482-3540')" /></td>
+        <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කූ" onclick="onClick('vowel', '3482-3542')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කෘ" onclick="onClick('vowel', 'kru')" /></td>
         <td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="කෲ" onclick="onClick('vowel', 'kau')" /></td>
         <!--<td><input class="btn btn-warning" style="font-size:30px;width:80px" type="button" value="ඏ" onclick="onClick('vowel', 'li')" /></td>
